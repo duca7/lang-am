@@ -1,0 +1,21 @@
+:root{
+    --main-bg-color: #000000;
+    --text-white: #ffffff
+}
+
+html{
+    font-size: 16px;
+}
+
+h1{
+    font-size: 60px;
+    font-family: '';
+}
+
+h2{
+    font-size: 40px;
+}
+
+h3{
+    font-size: 24px;
+}
