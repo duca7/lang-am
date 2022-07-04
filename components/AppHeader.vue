@@ -1,12 +1,31 @@
 <template>
   <header class="nav">
-    <img class="logo" src="/img/logo.png" width="67px" height="67px" />
-    <AppHeaderHamburger />
+    <img class="logo" src="/images/logo.png" width="48px" height="48px" />
+    <AppHeaderHamburger @toggleModal="toggleModal" />
   </header>
+
+  <transition name="slide">
+    <div v-if="isOpen" ref="sidebar" class="sidebar">
+      <AppSidebar></AppSidebar>
+    </div>
+  </transition>
+
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      isOpen: false
+    }
+  },
+  methods: {
+    toggleModal: function (isOpen) {
+      console.log(this.isOpen)
+      this.isOpen = isOpen
+    }
+  }
+};
 </script>
 
 <style lang="scss">
@@ -14,6 +33,32 @@ export default {}
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.3em  1.3em 0em;
+  height: 8vh;
+
+}
+
+.sidebar {
+  position: fixed;
+  width: 100vw;
+  height: 92vh;
+  background-color: #000;
+}
+
+.slide-leave-active,
+.slide-enter-active {
+  transition: 1s;
+}
+
+.slide-enter-from {
+  transform: translateX(100%);
+}
+
+.slide-enter-to {
+  transform: translateX(0%);
+}
+
+.slide-leave-to {
+  transform: translateX(100%);
 }
 </style>
+
