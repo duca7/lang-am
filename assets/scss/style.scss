@@ -1,4 +1,5 @@
-* {
+*,
+li {
   color: #fff;
   font-family: 'Raleway', sans-serif;
 }
@@ -14,6 +15,10 @@ h6 {
 
 html {
   font-size: 16px;
+}
+
+.fs-30px {
+  font-size: 30px;
 }
 
 // h1 {

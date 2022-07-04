@@ -43,16 +43,15 @@ export default {
   width: 48px;
   display: flex;
   flex-direction: column;
-  // align-items: center;
   justify-content: center;
   position: relative;
 
   span {
     width: $outer-path-width;
     height: 2px;
-    background-color: #a52325;
+    background-color: $primary-dark-red;
     transition-property: transform color;
-    transition: 1s;
+    transition: 0.3s linear;
 
 
 

@@ -2,7 +2,7 @@
     <main class="home">
         <div class="main-image"></div>
         <article>
-            <h1>Múa rối nước là một nghệ thuật sân khấu dân gian.</h1>
+            <h1 class="fs-30px">Múa rối nước là một nghệ thuật sân khấu dân gian.</h1>
             <div class="description">
                 <p> Từ nghệ thuật dân gian, Rối Nước trở thành truyền thống, sáng tạo của người Việt. </p>
                 <div>Next</div>
@@ -27,10 +27,6 @@ export default {};
 
     article {
         margin: 0 1em;
-
-        h1 {
-            font-size: 1.7rem;
-        }
 
         .description {
             padding-top: 1rem;
