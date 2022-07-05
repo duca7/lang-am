@@ -27,6 +27,7 @@ export default {
   $mid-path-width: 29px;
   $outer-path-width: 14px;
 
+  margin: 0.5rem;
   @mixin outer($rotate) {
     margin: 3px 0;
 

@@ -1,6 +1,6 @@
 <template>
   <header class="nav">
-    <img class="logo" src="/images/logo.png" width="48px" height="48px" />
+    <img class="logo" src="/images/logo.png" width="55px" height="55px" />
     <AppHeaderHamburger @toggleModal="toggleModal" />
   </header>
 
@@ -35,6 +35,9 @@ export default {
   align-items: center;
   height: 8vh;
 
+  .logo{
+    margin-left: 2rem;
+  }
 }
 
 .sidebar {
