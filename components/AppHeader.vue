@@ -36,7 +36,7 @@ export default {
   height: 8vh;
 
   .logo{
-    margin-left: 2rem;
+    margin-left: 1rem;
   }
 }
 

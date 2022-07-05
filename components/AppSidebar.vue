@@ -1,7 +1,7 @@
 <template>
   <ul class="route" v-for="nav in navData" :key="nav.id">
     <li>
-      <div class="route-text">
+      <div class="route_text">
         <img :src="nav.icon_flower" alt="hoa sen" />
         <a href="#">{{ nav.text }}</a>
       </div>
@@ -18,9 +18,9 @@
         <li>Youtube</li>
       </ul>
       <div class="description">
-        Placerat id lorem augue consequat, viverra. Ipsum tellus pellentesque
-        convallisimlt tincidunt augue. Eget nulla sodales varius interdum
-        platea.
+        Copyright © 2005–2022 Công ty Nhà Hát Múa Rối Nước Rồng Vàng. Rồng Vàng
+        là một phần của Công ty TNHH một thành viên Nhà Hát Trẻ về các nghệ
+        thuật truyền thống
       </div>
     </div>
   </div>
@@ -76,7 +76,7 @@ export default {
 
   display: flex;
   flex-direction: column;
-  width: 85%;
+  width: 90%;
   margin: 0 auto;
   text-align: center;
   li {
@@ -126,7 +126,8 @@ export default {
       left: 8%;
       text-align: center;
       font-size: 0.75rem;
-      line-height: 1.5rem;
+      line-height: 140%;
+      color: #BFBFBF;
     }
   }
 }
