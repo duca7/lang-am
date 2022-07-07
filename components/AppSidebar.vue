@@ -1,72 +1,74 @@
 <template>
-  <ul class="route" v-for="nav in navData" :key="nav.id">
-    <li>
-      <div class="route_text">
-        <img :src="nav.icon_flower" alt="hoa sen" />
-        <a href="#">{{ nav.text }}</a>
-      </div>
-      <img :src="nav.icon_arrow" alt="arrow right" />
-    </li>
-  </ul>
+  <div>
+    <ul v-for="nav in navData" :key="nav.id" class="route">
+      <li>
+        <div class="route_text">
+          <img :src="nav.icon_flower" alt="hoa sen">
+          <a href="#">{{ nav.text }}</a>
+        </div>
+        <img :src="nav.icon_arrow" alt="arrow right">
+      </li>
+    </ul>
 
-  <div class="bottom">
-    <img src="/images/bg-menu.png" alt="bg-menu" />
-    <div class="bottom_text">
-      <ul class="social">
-        <li>Facebook</li>
-        <li>Twitter</li>
-        <li>Youtube</li>
-      </ul>
-      <div class="description">
-        Copyright © 2005–2022 Công ty Nhà Hát Múa Rối Nước Rồng Vàng. Rồng Vàng
-        là một phần của Công ty TNHH một thành viên Nhà Hát Trẻ về các nghệ
-        thuật truyền thống
+    <div class="bottom">
+      <img src="/images/bg-menu.png" alt="bg-menu">
+      <div class="bottom_text">
+        <ul class="social">
+          <li>Facebook</li>
+          <li>Twitter</li>
+          <li>Youtube</li>
+        </ul>
+        <div class="description">
+          Copyright © 2005–2022 Công ty Nhà Hát Múa Rối Nước Rồng Vàng. Rồng Vàng
+          là một phần của Công ty TNHH một thành viên Nhà Hát Trẻ về các nghệ
+          thuật truyền thống
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref } from 'vue';
 export default {
-  setup() {
+  setup () {
     const navData = ref([
       {
-        icon_flower: "images/icon-sen.svg",
-        icon_arrow: "images/icon-arrow-right.svg",
-        text: "Rối Nước",
+        icon_flower: 'images/icon-sen.svg',
+        icon_arrow: 'images/icon-arrow-right.svg',
+        text: 'Rối Nước'
       },
       {
-        icon_flower: "images/icon-sen.svg",
-        icon_arrow: "images/icon-arrow-right.svg",
-        text: "Trò Tích",
+        icon_flower: 'images/icon-sen.svg',
+        icon_arrow: 'images/icon-arrow-right.svg',
+        text: 'Trò Tích'
       },
       {
-        icon_flower: "images/icon-sen.svg",
-        icon_arrow: "images/icon-arrow-right.svg",
-        text: "Rồng Vàng",
+        icon_flower: 'images/icon-sen.svg',
+        icon_arrow: 'images/icon-arrow-right.svg',
+        text: 'Rồng Vàng'
       },
       {
-        icon_flower: "images/icon-sen.svg",
-        icon_arrow: "images/icon-arrow-right.svg",
-        text: "Booking",
+        icon_flower: 'images/icon-sen.svg',
+        icon_arrow: 'images/icon-arrow-right.svg',
+        text: 'Booking'
       },
       {
-        icon_flower: "images/icon-sen.svg",
-        icon_arrow: "images/icon-arrow-right.svg",
-        text: "Lưu niệm",
+        icon_flower: 'images/icon-sen.svg',
+        icon_arrow: 'images/icon-arrow-right.svg',
+        text: 'Lưu niệm'
       },
       {
-        icon_flower: "images/icon-sen.svg",
-        icon_arrow: "images/icon-arrow-right.svg",
-        text: "Liên Hệ",
-      },
+        icon_flower: 'images/icon-sen.svg',
+        icon_arrow: 'images/icon-arrow-right.svg',
+        text: 'Liên Hệ'
+      }
     ]);
 
     return {
-      navData,
+      navData
     };
-  },
+  }
 };
 </script>
 
@@ -79,6 +81,7 @@ export default {
   width: 90%;
   margin: 0 auto;
   text-align: center;
+
   li {
     padding-top: 2rem;
     font-size: 1.875rem;
@@ -116,6 +119,7 @@ export default {
       display: flex;
       justify-content: space-evenly;
       align-items: center;
+
       li {
         font-size: 1.125rem;
       }
