@@ -1,19 +1,28 @@
 <script>
 import { h } from 'vue';
+
 export default {
   props: {
     level: {
       type: Number,
       default: 1
+    },
+    title: {
+      type: String,
+      require: true
     }
   },
   setup (props, { slots }) {
     const heading = 'h' + props.level;
-    const child = [
-      h(heading, { class: 'text' }, slots.default()),
+    const textChild = [
+      h(heading, { class: 'text' }, props.title),
       h('div', { class: 'underline' })
     ];
-    return () => h('div', { class: 'title' }, child);
+    const description = slots.default ? slots.default() : '';
+    const descChild = h('p', { class: 'desc' }, description);
+
+    const titleComponent = h('div', { class: 'title' }, textChild);
+    return () => h('div', { class: 'app-title' }, [titleComponent, descChild]);
   }
 };
 </script>
@@ -22,11 +31,20 @@ export default {
 .title{
     display: flex;
     align-items: center;
-    font-size: 3.5rem;
+
+    h1,
+    .underline{
+      font-size: 3.5rem;
+    }
+
+    h2,
+    .underline{
+      font-size: 2rem;
+    }
 
     .underline{
-        flex:1;
-        max-width: 1.5em;
+        // flex:1;
+        width: 1.5em;
         margin-left: 0.3em;
         height: 1px;
         background-color: #fff;
