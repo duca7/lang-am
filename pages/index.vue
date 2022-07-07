@@ -23,7 +23,7 @@ export default {};
 <style lang="scss">
 .home {
   .main-image {
-    background-size: auto 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     height: 65vh;
     width: 100%;

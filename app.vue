@@ -13,9 +13,9 @@ useHead({
   charset: 'utf-8',
   meta: [
     { name: 'description', content: 'My amazing site.' }
-  ],
-  bodyAttrs: {
-    class: 'test'
-  }
+  ]
+  // bodyAttrs: {
+  // class: 'test'
+  // }
 });
 </script>

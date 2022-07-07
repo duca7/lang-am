@@ -1,6 +1,6 @@
 <template>
   <transition name="slide">
-    <aside v-if="isOpen" class="sidebar">
+    <aside v-show="isOpen" class="sidebar">
       <ul v-for="nav in navData" :key="nav.id" class="route">
         <li>
           <div class="route_text">
@@ -141,7 +141,6 @@ export default {
 }
 
 .sidebar {
-  z-index: 1;
   position: fixed;
   width: 100%;
   margin-top: $navbar-height;

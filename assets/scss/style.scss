@@ -22,5 +22,6 @@ body {
 .app {
   &-container {
     padding-top: $navbar-height;
+    overflow-x: hidden;
   }
 }
