@@ -5,6 +5,7 @@
     </AppTitle>
 
     <WaterPuppetArticle v-for="article in articleData" :key="article.id" :title="article.title" :description="article.description" :background="article.background" />
+    <AppButtonBottomRight />
   </div>
 </template>
 
