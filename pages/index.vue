@@ -1,5 +1,5 @@
 <template>
-  <main class="home container">
+  <main class="home">
     <div class="main-image" />
     <article>
       <h1>Góc nhìn mới theo dòng chảy văn hóa mới.</h1>

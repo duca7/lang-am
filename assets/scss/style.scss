@@ -7,32 +7,20 @@ h6 {
   font-family: 'MTD Valky Bold', 'Raleway', sans-serif;
 }
 
-:root {
-  --primary-dark-red: #a52325;
-}
-
 html {
   color: #fff;
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
+  background-color: #000;
 }
-
-.fs-30px {
-  font-size: 30px;
-}
-
-// h1 {
-//   font-size: 60px;
-// }
-
-// h2 {
-//   font-size: px;
-// }
-
-// h3 {
-//   font-size: 24px;
-// }
 
 body {
-  background-color: #000;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.app {
+  &-container {
+    padding-top: $navbar-height;
+  }
 }

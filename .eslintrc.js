@@ -20,6 +20,7 @@ module.exports = {
     quotes: ['error', 'single'],
     semi: ['error', 'always'],
     indent: ['error', 2],
+    'vue/no-multiple-template-root': 0,
     'no-multi-spaces': ['error'],
     'no-unused-vars': ['error', { vars: 'all', args: 'after-used', ignoreRestSiblings: false }]
   }

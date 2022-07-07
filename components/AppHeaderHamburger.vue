@@ -1,5 +1,5 @@
 <template>
-  <div class="hamburger" @click="toggleModal">
+  <div class="hamburger" @click="toggle">
     <span :class="{ active: isOpen }" />
     <span :class="{ active: isOpen }" />
     <span :class="{ active: isOpen }" />
@@ -7,17 +7,11 @@
 </template>
 
 <script>
+
 export default {
-  data () {
-    return {
-      isOpen: false
-    };
-  },
-  methods: {
-    toggleModal: function () {
-      this.isOpen = !this.isOpen;
-      this.$emit('toggleModal', this.isOpen);
-    }
+  setup () {
+    const { isOpen, toggle } = useSidebar();
+    return { isOpen, toggle };
   }
 };
 </script>
@@ -38,8 +32,6 @@ export default {
     }
   }
 
-  height: 48px;
-  width: 48px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -48,7 +40,7 @@ export default {
   span {
     width: $outer-path-width;
     height: 2px;
-    background-color: var(--primary-dark-red);
+    background-color: $primary-dark-red;
     transition-property: transform color;
     transition: 0.3s linear;
 

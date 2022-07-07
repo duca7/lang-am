@@ -1,35 +1,38 @@
 <template>
-  <div>
-    <ul v-for="nav in navData" :key="nav.id" class="route">
-      <li>
-        <div class="route_text">
-          <img :src="nav.icon_flower" alt="hoa sen">
-          <a href="#">{{ nav.text }}</a>
-        </div>
-        <img :src="nav.icon_arrow" alt="arrow right">
-      </li>
-    </ul>
+  <transition name="slide">
+    <aside v-if="isOpen" class="sidebar">
+      <ul v-for="nav in navData" :key="nav.id" class="route">
+        <li>
+          <div class="route_text">
+            <img :src="nav.icon_flower" alt="hoa sen">
+            <a href="#">{{ nav.text }}</a>
+          </div>
+          <img :src="nav.icon_arrow" alt="arrow right">
+        </li>
+      </ul>
 
-    <div class="bottom">
-      <img src="/images/bg-menu.png" alt="bg-menu">
-      <div class="bottom_text">
-        <ul class="social">
-          <li>Facebook</li>
-          <li>Twitter</li>
-          <li>Youtube</li>
-        </ul>
-        <div class="description">
-          Copyright © 2005–2022 Công ty Nhà Hát Múa Rối Nước Rồng Vàng. Rồng Vàng
-          là một phần của Công ty TNHH một thành viên Nhà Hát Trẻ về các nghệ
-          thuật truyền thống
+      <div class="bottom">
+        <img src="/images/bg-menu.png" alt="bg-menu">
+        <div class="bottom_text">
+          <ul class="social">
+            <li>Facebook</li>
+            <li>Twitter</li>
+            <li>Youtube</li>
+          </ul>
+          <div class="description">
+            Copyright © 2005–2022 Công ty Nhà Hát Múa Rối Nước Rồng Vàng. Rồng Vàng
+            là một phần của Công ty TNHH một thành viên Nhà Hát Trẻ về các nghệ
+            thuật truyền thống
+          </div>
         </div>
       </div>
-    </div>
-  </div>
+    </aside>
+  </transition>
 </template>
 
 <script>
 import { ref } from 'vue';
+
 export default {
   setup () {
     const navData = ref([
@@ -64,9 +67,10 @@ export default {
         text: 'Liên Hệ'
       }
     ]);
-
+    const { isOpen } = useSidebar();
     return {
-      navData
+      navData,
+      isOpen
     };
   }
 };
@@ -135,4 +139,31 @@ export default {
     }
   }
 }
+
+.sidebar {
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  margin-top: $navbar-height;
+  height: $sidebar-height;
+  background-color: #000;
+}
+
+.slide-leave-active,
+.slide-enter-active {
+  transition: 1s;
+}
+
+.slide-enter-from {
+  transform: translateX(100%);
+}
+
+.slide-enter-to {
+  transform: translateX(0%);
+}
+
+.slide-leave-to {
+  transform: translateX(100%);
+}
+
 </style>

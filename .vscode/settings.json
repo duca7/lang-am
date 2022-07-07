@@ -1,22 +1,23 @@
-// {
-//   "editor.codeActionsOnSave": {
-//     "source.fixAll": true
-//   },
-//   "editor.formatOnSave": true,
-//   "eslint.format.enable":true
-// }
 {
+    "[vue]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
     "eslint.format.enable": true,
     "editor.codeActionsOnSave": {
         "source.fixAll": true
     },
+    "editor.formatOnPaste": true,
     "eslint.validate": [
-        "javascript,vue"
+        "javascript",
+        "vue"
     ],
-    "[vue]": {
-        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-    },
-    "[typescript]":{
-        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-    }
+    "tabnine.disableFileRegex": [
+        "vue"
+    ]
 }

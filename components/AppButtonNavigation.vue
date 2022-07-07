@@ -37,7 +37,6 @@
   text-transform: uppercase;
   transform: rotate(-103deg);
   color: #fff;
-  z-index: -1;
   font-family: Raleway;
   fill: #a52325;
 }
