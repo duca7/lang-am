@@ -1,17 +1,17 @@
 <template>
   <div class="hamburger" @click="toggleModal">
-    <span :class="{ active: isOpen }"></span>
-    <span :class="{ active: isOpen }"></span>
-    <span :class="{ active: isOpen }"></span>
+    <span :class="{ active: isOpen }" />
+    <span :class="{ active: isOpen }" />
+    <span :class="{ active: isOpen }" />
   </div>
 </template>
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       isOpen: false
-    }
+    };
   },
   methods: {
     toggleModal: function () {
@@ -38,7 +38,6 @@ export default {
     }
   }
 
-
   height: 48px;
   width: 48px;
   display: flex;
@@ -49,11 +48,9 @@ export default {
   span {
     width: $outer-path-width;
     height: 2px;
-    background-color: $primary-dark-red;
+    background-color: var(--primary-dark-red);
     transition-property: transform color;
     transition: 0.3s linear;
-
-
 
     &:nth-child(1) {
       margin: 3px 0;
@@ -79,7 +76,6 @@ export default {
       }
     }
 
-
     &:nth-child(2) {
       width: $mid-path-width;
       height: 3px;
@@ -90,9 +86,7 @@ export default {
       }
     }
 
-
   }
-
 
 }
 </style>
