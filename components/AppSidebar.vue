@@ -1,67 +1,136 @@
 <template>
-    <nav>
-        <ul class="route">
-            <li class="route-item fs-30px" v-for="route in routeMap" :key="route.name">
-                <img src="/icons/icon-park-outline_lotus.svg" class="icon">
-                <p>{{ route.name }}</p>
-            </li>
-        </ul>
-    </nav>
+  <ul class="route" v-for="nav in navData" :key="nav.id">
+    <li>
+      <div class="route_text">
+        <img :src="nav.icon_flower" alt="hoa sen" />
+        <a href="#">{{ nav.text }}</a>
+      </div>
+      <img :src="nav.icon_arrow" alt="arrow right" />
+    </li>
+  </ul>
+
+  <div class="bottom">
+    <img src="/images/bg-menu.png" alt="bg-menu" />
+    <div class="bottom_text">
+      <ul class="social">
+        <li>Facebook</li>
+        <li>Twitter</li>
+        <li>Youtube</li>
+      </ul>
+      <div class="description">
+        Copyright © 2005–2022 Công ty Nhà Hát Múa Rối Nước Rồng Vàng. Rồng Vàng
+        là một phần của Công ty TNHH một thành viên Nhà Hát Trẻ về các nghệ
+        thuật truyền thống
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-
-
-
-
+import { ref } from "vue";
 export default {
-    data() {
-        return {
-            routeMap
-        }
-    }
+  setup() {
+    const navData = ref([
+      {
+        icon_flower: "images/icon-sen.svg",
+        icon_arrow: "images/icon-arrow-right.svg",
+        text: "Rối Nước",
+      },
+      {
+        icon_flower: "images/icon-sen.svg",
+        icon_arrow: "images/icon-arrow-right.svg",
+        text: "Trò Tích",
+      },
+      {
+        icon_flower: "images/icon-sen.svg",
+        icon_arrow: "images/icon-arrow-right.svg",
+        text: "Rồng Vàng",
+      },
+      {
+        icon_flower: "images/icon-sen.svg",
+        icon_arrow: "images/icon-arrow-right.svg",
+        text: "Booking",
+      },
+      {
+        icon_flower: "images/icon-sen.svg",
+        icon_arrow: "images/icon-arrow-right.svg",
+        text: "Lưu niệm",
+      },
+      {
+        icon_flower: "images/icon-sen.svg",
+        icon_arrow: "images/icon-arrow-right.svg",
+        text: "Liên Hệ",
+      },
+    ]);
 
-}
-const routeMap = [
-    {
-        path: '',
-        name: 'Rối Nước',
-    },
-    {
-        path: '',
-        name: 'Trò Tích',
-    },
-    {
-        path: '',
-        name: 'Rồng Vàng',
-    },
-    {
-        path: '',
-        name: 'Booking',
-    },
-    {
-        path: '',
-        name: 'Lưu niệm',
-    },
-    {
-        path: '',
-        name: 'Liên hệ',
-    }
-]
+    return {
+      navData,
+    };
+  },
+};
 </script>
 
 <style lang="scss">
-.route-item {
+.route {
+  $color-red: #5e0101;
+
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+
+  li {
+    padding-top: 2rem;
+    font-size: 1.875rem;
+    font-weight: medium;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    margin-top: 2rem;
 
-    .icon {
-        width: 1em;
-        height: 1em;
-        margin-left: 1rem;
-        margin-right: 2rem;
-
+    a {
+      text-decoration: none;
+      margin-left: 1rem;
+      color: $color-red;
     }
+  }
+}
+
+.bottom {
+  width: 100%;
+
+  img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 10vh;
+  }
+
+  &_text {
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+    width: 85%;
+    margin: 0 auto;
+
+    .social {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      li {
+        font-size: 1.125rem;
+      }
+    }
+
+    .description {
+      padding-top: 1rem;
+      left: 8%;
+      text-align: center;
+      font-size: 0.75rem;
+      line-height: 140%;
+      color: #BFBFBF;
+    }
+  }
 }
 </style>
