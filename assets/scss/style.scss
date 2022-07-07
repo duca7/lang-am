@@ -1,4 +1,4 @@
-
+$primary-red: #a52325;
 
 h1,
 h2,
@@ -29,4 +29,14 @@ html {
 
 body {
   background-color: #000;
+
+  &.pause{
+    height: 100vh;
+    overflow-y: hidden ;
+  }
+}
+
+
+.container{
+  margin-top: 8vh;
 }

@@ -9,33 +9,39 @@
       <AppSidebar></AppSidebar>
     </div>
   </transition>
-
 </template>
 
 <script>
 export default {
   data() {
     return {
-      isOpen: false
-    }
+      isOpen: false,
+    };
   },
   methods: {
     toggleModal: function (isOpen) {
-      console.log(this.isOpen)
-      this.isOpen = isOpen
-    }
-  }
+      console.log(this.isOpen);
+      this.isOpen = isOpen;
+      document.body.classList.add('pause');
+    },
+  },
 };
 </script>
 
 <style lang="scss">
 .nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: black;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 8vh;
 
-  .logo{
+  .logo {
     margin-left: 1rem;
   }
 }
@@ -45,6 +51,7 @@ export default {
   width: 100vw;
   height: 92vh;
   background-color: #000;
+  z-index: 1;
 }
 
 .slide-leave-active,
@@ -64,4 +71,3 @@ export default {
   transform: translateX(100%);
 }
 </style>
-
