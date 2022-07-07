@@ -3,17 +3,24 @@ import eslintPlugin from 'vite-plugin-eslint';
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  /*
-   ** Global CSS
-   */
-  // modules: [
-  //   '@nuxtjs/style-resources'
-  // ],
-  css: ['~/assets/scss/reset.scss', '~/assets/scss/style.scss', '~/assets/scss/fonts.scss'],
-  styleResources: {
-    scss: ['./assets/scss/*.scss']
+  head: {
+    meta: [
+      { name: 'viewport', content: 'user-scalable=no, width=device-width, initial-scale=1' }
+    ]
   },
+  css: [
+    '~/assets/scss/reset.scss',
+    '~/assets/scss/style.scss',
+    '~/assets/scss/fonts.scss'],
+  styleResources: { scss: ['./assets/scss/*.scss'] },
   vite: {
-    plugins: [eslintPlugin()]
+    plugins: [eslintPlugin()],
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@import "@/assets/scss/variables.scss";'
+        }
+      }
+    }
   }
 });
