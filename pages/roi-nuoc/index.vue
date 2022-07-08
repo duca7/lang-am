@@ -30,7 +30,7 @@ export default {
         background: 'images/ngu-ong.png'
       },
       {
-        title: 'Giới Thiệu',
+        title: 'Biểu Diễn',
         description:
                     'Trong biểu diễn rối nước không chỉ có con rối mà lời ca của nghệ sĩ và cách diễn rối của nghệ nhân quan trọng không kém. ',
         background: 'images/ho-guom.png'
