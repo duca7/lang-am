@@ -20,8 +20,8 @@
     </div>
     <div class="arrow">
       <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0.828125 7.95745H21.7372C19.2372 8.18028 14.4645 9.05384 13.5554 14.9365" stroke="#5E0101" />
-        <path d="M0.828125 7.9571H21.7372C19.2372 7.73427 14.4645 6.86071 13.5554 0.978027" stroke="#5E0101" />
+        <path d="M0.828125 7.95745H21.7372C19.2372 8.18028 14.4645 9.05384 13.5554 14.9365" stroke="#a52325" />
+        <path d="M0.828125 7.9571H21.7372C19.2372 7.73427 14.4645 6.86071 13.5554 0.978027" stroke="#a52325" />
       </svg>
     </div>
   </div>
@@ -38,7 +38,7 @@
     transform: rotate(-103deg);
     color: #fff;
     font-family: Raleway;
-    fill: #a52325;
+    fill: $primary-dark-red-100;
 }
 
 @keyframes rotating {
@@ -60,7 +60,7 @@
     transform: translate(-50%, -50%);
 
     svg {
-        transform: scale(1.5);
+        transform: scale(1);
     }
 }
 </style>
