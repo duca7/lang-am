@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <AppTitle :level="1" title="Rối Nước">
+    <AppTitle :level="1" title="Rối Nước" :class="title">
       Là một loại hình nghệ thuật sân khấu độc đáo, ra đời từ nền văn hóa lúa nước.
     </AppTitle>
 
@@ -12,6 +12,7 @@
       :background="article.background"
     />
     <AppButtonBottomRight />
+    <div class="overlay" />
   </div>
 </template>
 
@@ -42,8 +43,37 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+.app-title{
+  margin-top: 2.063rem;
+}
 .main {
     width: 100%;
+    position: relative;
+    .overlay{
+    background-color: #000;
+    background-image: url('images/la-sen-lon.png');
+    background-position: 65% 0;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    height: 90%;
+    left: 0;
+    opacity: .3;
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    z-index: -1;
+  }
+}
+
+.title{
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.desc{
+  max-width: 90%;
+  margin: 0 auto;
+  padding-top: 0.6rem;
 }
 </style>

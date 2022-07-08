@@ -12,6 +12,7 @@
     position: fixed;
     bottom: 0px;
     right: 0px;
+    z-index: 2;
 }
 .feedback {
     display: flex;

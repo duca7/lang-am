@@ -1,6 +1,8 @@
 <template>
   <AppHeader />
+  <AppButtonBottomRight />
   <AppSidebar />
+
   <div class="app-container">
     <NuxtPage />
     <AppFooter />

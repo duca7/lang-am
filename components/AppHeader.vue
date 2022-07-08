@@ -14,6 +14,7 @@ export default {};
     position: fixed;
     box-sizing: border-box;
     background: black;
+    z-index: 1;
 
     display: flex;
     justify-content: space-between;

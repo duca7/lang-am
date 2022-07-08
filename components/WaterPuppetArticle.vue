@@ -5,7 +5,7 @@
       <img src="images/icon-art-work.png" alt="" width="52px" height="19px" class="title-icon">
     </div>
     <div class="water-puppet_bg">
-      <img :src="background" alt="">
+      <img :src="background" alt="hinh-roi-nuoc">
     </div>
     <div class="water-puppet_description">
       <p>{{ description }}</p>
@@ -37,7 +37,7 @@ export default {
 
 <style lang="scss" scoped>
 .water-puppet {
-    margin-top: 2rem;
+    margin: 2rem 0;
     &_title {
         max-width: 90%;
         margin: 0 auto;

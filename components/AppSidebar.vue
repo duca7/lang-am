@@ -148,6 +148,7 @@ export default {
     margin-top: $navbar-height;
     height: $sidebar-height;
     background-color: #000;
+    z-index: 3;
 }
 
 .slide-leave-active,
