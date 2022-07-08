@@ -5,7 +5,9 @@
         <li>
           <div class="route_text">
             <img :src="nav.icon_flower" alt="hoa sen">
-            <a href="#">{{ nav.text }}</a>
+            <NuxtLink :to="nav.link">
+              {{ nav.text }}
+            </NuxtLink>
           </div>
           <img :src="nav.icon_arrow" alt="arrow right">
         </li>
@@ -20,9 +22,8 @@
             <li>Youtube</li>
           </ul>
           <div class="description">
-            Copyright © 2005–2022 Công ty Nhà Hát Múa Rối Nước Rồng Vàng. Rồng Vàng
-            là một phần của Công ty TNHH một thành viên Nhà Hát Trẻ về các nghệ
-            thuật truyền thống
+            Copyright © 2005–2022 Công ty Nhà Hát Múa Rối Nước Rồng Vàng. Rồng Vàng là một phần của Công ty
+            TNHH một thành viên Nhà Hát Trẻ về các nghệ thuật truyền thống
           </div>
         </div>
       </div>
@@ -44,7 +45,8 @@ export default {
       {
         icon_flower: 'images/icon-sen.svg',
         icon_arrow: 'images/icon-arrow-right.svg',
-        text: 'Trò Tích'
+        text: 'Trò Tích',
+        link: 'tro-tich'
       },
       {
         icon_flower: 'images/icon-sen.svg',
@@ -78,91 +80,90 @@ export default {
 
 <style lang="scss">
 .route {
-  $color-red: #5e0101;
+    $color-red: #5e0101;
 
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  margin: 0 auto;
-  text-align: center;
-
-  li {
-    padding-top: 2rem;
-    font-size: 1.875rem;
-    font-weight: medium;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
 
-    a {
-      text-decoration: none;
-      margin-left: 1rem;
-      color: $color-red;
+    li {
+        padding-top: 2rem;
+        font-size: 1.875rem;
+        font-weight: medium;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        a {
+            text-decoration: none;
+            margin-left: 1rem;
+            color: $color-red;
+        }
     }
-  }
 }
 
 .bottom {
-  width: 100%;
-
-  img {
     width: 100%;
-    height: auto;
-    position: relative;
-    top: 10vh;
-  }
 
-  &_text {
-    position: absolute;
-    left: 5%;
-    bottom: 5%;
-    width: 85%;
-    margin: 0 auto;
-
-    .social {
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-
-      li {
-        font-size: 1.125rem;
-      }
+    img {
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: 10vh;
     }
 
-    .description {
-      padding-top: 1rem;
-      left: 8%;
-      text-align: center;
-      font-size: 0.75rem;
-      line-height: 140%;
-      color: #BFBFBF;
+    &_text {
+        position: absolute;
+        left: 5%;
+        bottom: 5%;
+        width: 85%;
+        margin: 0 auto;
+
+        .social {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            li {
+                font-size: 1.125rem;
+            }
+        }
+
+        .description {
+            padding-top: 1rem;
+            left: 8%;
+            text-align: center;
+            font-size: 0.75rem;
+            line-height: 140%;
+            color: #bfbfbf;
+        }
     }
-  }
 }
 
 .sidebar {
-  position: fixed;
-  width: 100%;
-  margin-top: $navbar-height;
-  height: $sidebar-height;
-  background-color: #000;
+    position: fixed;
+    width: 100%;
+    margin-top: $navbar-height;
+    height: $sidebar-height;
+    background-color: #000;
 }
 
 .slide-leave-active,
 .slide-enter-active {
-  transition: 1s;
+    transition: 1s;
 }
 
 .slide-enter-from {
-  transform: translateX(100%);
+    transform: translateX(100%);
 }
 
 .slide-enter-to {
-  transform: translateX(0%);
+    transform: translateX(0%);
 }
 
 .slide-leave-to {
-  transform: translateX(100%);
+    transform: translateX(100%);
 }
-
 </style>

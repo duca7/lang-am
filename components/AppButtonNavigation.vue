@@ -29,38 +29,38 @@
 
 <style lang="scss">
 .app-btn {
-  position: relative;
+    position: relative;
 }
 .rounded-text {
-  // width: 25.625rem;
-  // height: 25.625rem;
-  text-transform: uppercase;
-  transform: rotate(-103deg);
-  color: #fff;
-  font-family: Raleway;
-  fill: #a52325;
+    // width: 25.625rem;
+    // height: 25.625rem;
+    text-transform: uppercase;
+    transform: rotate(-103deg);
+    color: #fff;
+    font-family: Raleway;
+    fill: #a52325;
 }
 
 @keyframes rotating {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 .rotating {
-  animation: rotating 12s linear infinite;
+    animation: rotating 12s linear infinite;
 }
 
 .arrow {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
-  svg {
-    transform: scale(1.5);
-  }
+    svg {
+        transform: scale(1.5);
+    }
 }
 </style>

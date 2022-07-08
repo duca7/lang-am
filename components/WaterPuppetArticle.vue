@@ -36,52 +36,50 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-.water-puppet{
-  margin-top: 2rem;
-   &_title{
-    max-width: 90%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-  }
-  h1{
-    font-size: 1.875rem;
-    font-weight: 700;
-  };
-
-  .title-icon{
-    padding-left: 1rem;
-  }
-
-  &_bg{
-    padding-top: 1.25rem;
-    img{
-      width: 100%;
+.water-puppet {
+    margin-top: 2rem;
+    &_title {
+        max-width: 90%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
     }
-  }
+    h1 {
+        font-size: 1.875rem;
+        font-weight: 700;
+    }
 
-  &_description{
-      max-width: 90%;
-      margin: 0 auto;
-      padding-top: 1.25rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    .title-icon {
+        padding-left: 1rem;
+    }
 
-      p {
-        flex: 7;
-        font-size: 1rem;
-        font-weight:300;
-        text-align: justify;
-        line-height: 140%;
-        margin-right: 1rem;
-      }
+    &_bg {
+        padding-top: 1.25rem;
+        img {
+            width: 100%;
+        }
+    }
 
-      div {
-        flex: 3;
-      }
-  }
+    &_description {
+        max-width: 90%;
+        margin: 0 auto;
+        padding-top: 1.25rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            flex: 7;
+            font-size: 1rem;
+            font-weight: 300;
+            text-align: justify;
+            line-height: 140%;
+            margin-right: 1rem;
+        }
+
+        div {
+            flex: 3;
+        }
+    }
 }
-
 </style>

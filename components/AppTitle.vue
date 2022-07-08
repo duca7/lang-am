@@ -14,40 +14,55 @@ export default {
   },
   setup (props, { slots }) {
     const heading = 'h' + props.level;
-    const textChild = [
-      h(heading, { class: 'text' }, props.title),
-      h('div', { class: 'underline' })
-    ];
-    const description = slots.default ? slots.default() : '';
-    const descChild = h('p', { class: 'desc' }, description);
+    const textChild = [h(heading, { class: 'text' }, props.title), h('div', { class: 'underline' })];
 
-    const titleComponent = h('div', { class: 'title' }, textChild);
-    return () => h('div', { class: 'app-title' }, [titleComponent, descChild]);
+    if (slots.default) {
+      const child = [h('div', { class: 'title' }, textChild), h('p', { class: 'desc' }, slots.default())];
+      return () => h('div', { class: 'app-title' }, child);
+    }
+
+    return () => h('div', { class: 'title' }, textChild);
   }
 };
 </script>
 
 <style lang="scss">
-.title{
-    display: flex;
-    align-items: center;
+.title {
+  display: flex;
+  align-items: center;
 
-    h1,
-    .underline{
-      font-size: 3.5rem;
-    }
+  h1 {
+    font-size: 3.5rem;
 
-    h2,
-    .underline{
-      font-size: 2rem;
+    &+.underline {
+      max-width: 5rem;
     }
+  }
 
-    .underline{
-        // flex:1;
-        width: 1.5em;
-        margin-left: 0.3em;
-        height: 1px;
-        background-color: #fff;
+  h2 {
+    font-size: 2rem;
+
+    &+.underline {
+      max-width: 4rem;
     }
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 1.5rem;
+
+    &+.underline {
+      max-width: 3rem;
+    }
+  }
+
+  .underline {
+    flex: 1;
+    margin-left: 0.3em;
+    height: 1px;
+    background-color: #fff;
+  }
 }
 </style>
