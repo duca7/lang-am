@@ -22,7 +22,10 @@ module.exports = {
     indent: ['error', 2],
     'vue/no-multiple-template-root': 0,
     'no-multi-spaces': ['error'],
-    'no-unused-vars': ['error', { vars: 'all', args: 'after-used', ignoreRestSiblings: false }],
+    'no-unused-vars': [
+      'error',
+      { vars: 'all', args: 'after-used', ignoreRestSiblings: false }
+    ],
     'vue/require-default-prop': 0
   }
 };

@@ -9,25 +9,24 @@
 
 <style lang="scss" scoped>
 .btn-bottom {
-  position: fixed;
-  bottom: 0px;
-  right: 0px;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
 }
 .feedback {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $primary-dark-red;
+    background-color: $primary-dark-red-100;
     color: white;
-    width:170px;
+    width: 170px;
     height: 55px;
     border-top-left-radius: 20px;
     border: none;
     font-size: 1.25rem;
     font-weight: 400;
-    img{
+    img {
         padding-right: 1rem;
     }
 }
-
 </style>

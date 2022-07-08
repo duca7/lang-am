@@ -1,4 +1,3 @@
-
 export const useSidebar = () => {
   const isOpen = useState<boolean>('isOpen', () => false);
 
