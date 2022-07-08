@@ -20,6 +20,7 @@
       </div>
     </div>
   </div>
+
   <img src="images/maps.png" alt="ban-do" width="100%">
 </template>
 
@@ -28,7 +29,6 @@
     position: relative;
     margin-top: 2rem;
     padding: 0 1rem 2em;
-
    .info-list{
     margin-top: 1.25rem;
     .info{

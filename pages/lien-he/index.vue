@@ -1,8 +1,13 @@
 <template>
   <div class="contact">
     <AppTitle :level="1" title="Liên Hệ" class="title" />
-    <ContactConection />
-    <div class="overlay" />
+    <div>
+      <ContactConection />
+      <div class="overlay" />
+    </div>
+    <div>
+      <ContactAsk />
+    </div>
   </div>
 </template>
 
@@ -25,7 +30,7 @@
             top:0;
             left:0;
             width: 100%;
-            height: 100%;
+            height: 50%;
             background-color: #000;
             opacity: 0.3;
         }
