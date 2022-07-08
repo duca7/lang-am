@@ -38,7 +38,7 @@
   transform: rotate(-103deg);
   color: #fff;
   font-family: Raleway;
-  fill: #a52325;
+  fill: $primary-nav-button;
 }
 
 @keyframes rotating {

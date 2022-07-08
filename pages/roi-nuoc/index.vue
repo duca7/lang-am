@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <AppTitle :level="1" title="roi nuoc">
+    <AppTitle :level="1" title="Rối Nước">
       Là một loại hình nghệ thuật sân khấu độc đáo, ra đời từ nền văn hóa lúa nước.
     </AppTitle>
 
