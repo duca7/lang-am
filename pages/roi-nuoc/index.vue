@@ -13,6 +13,7 @@
     />
     <AppButtonBottomRight />
     <div class="overlay" />
+    <AppButtonBottomRight />
   </div>
 </template>
 
