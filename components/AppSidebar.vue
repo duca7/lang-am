@@ -5,7 +5,7 @@
         <li
           v-for="route in routes"
           :key="route.id"
-          :class="routeClass(route.path)"
+          :class="{ route: true, active: path === route.path }"
           @click="navigate(route.path)"
         >
           <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -77,12 +77,11 @@ export default {
     };
   },
 
-  methods: {
-    routeClass (path) {
-      return { route: true, active: this.path === path };
+  watch: {
+    isOpen () {
+      this.path = useRoute().path;
     }
   }
-
 };
 </script>
 
