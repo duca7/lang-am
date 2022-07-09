@@ -67,20 +67,19 @@ export default {
       }
     ]);
     const { isOpen, navigate } = useSidebar();
-    const route = useRoute();
-    const currentPath = route.path.split('/')[1];
+    const { path } = useRoute();
 
     return {
       routes,
       isOpen,
       navigate,
-      currentPath
+      path
     };
   },
 
   methods: {
     routeClass (path) {
-      return { route: true, active: this.currentPath === path };
+      return { route: true, active: this.path === path };
     }
   }
 
