@@ -8,17 +8,13 @@ export default defineNuxtConfig({
       { name: 'viewport', content: 'user-scalable=no, width=device-width, initial-scale=1' }
     ]
   },
-  css: [
-    '~/assets/scss/reset.scss',
-    '~/assets/scss/style.scss',
-    '~/assets/scss/fonts.scss'],
-  styleResources: { scss: ['./assets/scss/*.scss'] },
+  css: ['@/assets/scss/main.scss'],
   vite: {
     plugins: [eslintPlugin()],
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@import "@/assets/scss/variables.scss";'
+          additionalData: '@import "@/assets/scss/global.scss";'
         }
       }
     }

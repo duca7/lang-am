@@ -1,5 +1,6 @@
+<!-- eslint-disable vue/no-multiple-template-root -->
 <template>
-  <img class="show-image" :alt="item.displayName" :src="item.displayImage">
+  <img :alt="item.displayName" :src="item.displayImage">
   <p class="show-name">
     {{ item.displayName }}
   </p>
@@ -25,9 +26,6 @@ export default {
 
 <style lang="scss">
 .show {
-  &-image {
-    max-height: 150px;
-  }
 
   &-name {
     font-size: 1.2rem;
