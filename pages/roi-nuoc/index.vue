@@ -13,7 +13,7 @@
       :background="article.background"
     />
 
-    <WatterPuppetActivity />
+    <WaterPuppetActivity />
     <div>
       <AppButtonRed class="btn-bottom feedback">
         <img src="icons/gio.svg" alt="cai-gio-bat-ca">
@@ -85,7 +85,7 @@ export default {
     }
 }
   .overlay {
-    @include overlay("images/la-sen-lon.png");
+    @include overlay("/images/la-sen-lon.png");
   }
 }
 
