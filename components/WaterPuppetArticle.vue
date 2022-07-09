@@ -38,6 +38,7 @@ export default {
 <style lang="scss" scoped>
 .water-puppet {
     margin: 2rem 0;
+    position: relative;
     &_title {
         max-width: 90%;
         margin: 0 auto;

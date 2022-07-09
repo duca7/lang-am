@@ -11,8 +11,9 @@
       :description="article.description"
       :background="article.background"
     />
-    <AppButtonBottomRight />
     <div class="overlay" />
+
+    <WatterPuppetActivity />
     <AppButtonBottomRight />
   </div>
 </template>
