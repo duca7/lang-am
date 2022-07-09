@@ -24,7 +24,7 @@ export default {};
         background-repeat: no-repeat;
         height: 65vh;
         width: 100%;
-        background-image: url('images/chu-teu.jpeg');
+        background-image: url('/images/chu-teu.jpeg');
     }
 
     article {
