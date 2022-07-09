@@ -22,6 +22,13 @@
         <input placeholder="Email" type="email">
         <input placeholder="Phone" type="text">
         <input placeholder="Câu hỏi" type="text">
+        <div class="btn-form">
+          <img src="images/dinh-kem.png" alt="dinh-kem">
+          <button>
+            <img src="icons/icon-bird.svg" alt="icon-bird">
+            Gửi
+          </button>
+        </div>
       </form>
     </div>
   </div>
@@ -60,7 +67,6 @@ export default {
 <style lang="scss">
     .ask{
         width: 100%;
-        height: 100vh;
         position: relative;
         background-color: #000;
         padding: 2rem 2rem 1rem 2rem;
@@ -82,7 +88,6 @@ export default {
     .overlay{
         position: relative;
         width: 100%;
-        height: 600px;
 
         .ask-title{
             font-size: 1.5rem;
@@ -132,6 +137,28 @@ export default {
     }
 
     input:focus {
-    border-color: #000
+    border-color: #fff
+    }
+
+    button{
+      width: 120px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $primary-dark-red-100;
+      color: white;
+      border: none;
+
+      img{
+        padding-right: 0.4rem;
+      }
+    }
+
+    .btn-form{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem 0;
     }
 </style>
