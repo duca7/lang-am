@@ -1,12 +1,19 @@
 <template>
   <header class="nav">
-    <img id="logo" src="/images/logo.png">
+    <!-- <NuxtLink to="/"> -->
+    <img id="logo" src="/images/logo.png" @click="navigate('/')">
+    <!-- </NuxtLink> -->
     <AppHeaderHamburger />
   </header>
 </template>
 
 <script>
-export default {};
+export default {
+  setup () {
+    const { navigate } = useSidebar();
+    return { navigate };
+  }
+};
 </script>
 
 <style lang="scss">
