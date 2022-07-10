@@ -41,7 +41,7 @@ export default {
         height: 2px;
         background-color: $primary-dark-red-100;
         transition-property: transform color;
-        transition: 0.3s linear;
+        transition: 1s ;
 
         &:nth-child(1) {
             margin: 3px 0;

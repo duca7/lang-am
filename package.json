@@ -6,7 +6,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "lint": "eslint --ext .ts,vue --ignore-path .gitignore . ",
-    "lint:fix": "eslint --ext .ts,vue --ignore-path .gitignore . --fix"
+    "lint:fix": "eslint --ext .ts,vue --ignore-path .gitignore . --fix",
+    "makefile": "echo $null >> "
   },
   "devDependencies": {
     "@nuxtjs/eslint-config-typescript": "^10.0.0",
