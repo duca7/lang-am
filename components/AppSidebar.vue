@@ -5,7 +5,8 @@
         <li
           v-for="route in routes"
           :key="route.id"
-          :class="routeClass(route.path)"
+          class="route"
+          :class="{ active: active(route.path) }"
           @click="navigate(route.path)"
         >
           <svg
@@ -103,20 +104,28 @@ export default {
         path: '/lien-he'
       }
     ]);
-    const { isOpen, navigate } = useSidebar();
+    const { isOpen, navigate: nav } = useSidebar();
     const { path } = useRoute();
 
     return {
       routes,
       isOpen,
-      navigate,
-      path
+      path,
+      nav
     };
   },
-
+  watch: {
+    isOpen () {
+      // path.includes;
+    }
+  },
   methods: {
-    routeClass (path) {
-      return { route: true, active: this.path === path };
+    active (path) {
+      return this.path === path;
+    },
+    navigate (path) {
+      this.path = path;
+      this.nav(path);
     }
   }
 };

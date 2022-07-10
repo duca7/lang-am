@@ -1,4 +1,4 @@
-export const useSidebar = () => {
+export function useSidebar () {
   const isOpen = useState<boolean>('isOpen', () => false);
   const router = useRouter();
 
@@ -14,4 +14,4 @@ export const useSidebar = () => {
   }
 
   return { isOpen, toggle, navigate };
-};
+}
