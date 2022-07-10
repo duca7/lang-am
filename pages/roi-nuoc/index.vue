@@ -6,14 +6,18 @@
     </AppTitle>
 
     <WaterPuppetArticle
-      v-for="article in articleData"
-      :key="article.id"
-      :title="article.title"
-      :description="article.description"
-      :background="article.background"
+      title="Giới Thiệu"
+      description="Múa rối nước (hay còn gọi là trò rối nước) được coi là nét văn hóa phi vật thể dân gian đặc sắc của dân tộc Việt Nam."
+      background="/images/ngu-ong.png"
     />
 
-    <WaterPuppetActivity />
+    <WaterPuppetArticle
+      title="Biểu Diễn"
+      description="Trong biểu diễn rối nước không chỉ có con rối mà lời ca của nghệ sĩ và cách diễn rối của nghệ nhân quan trọng không kém. "
+      background="/images/ho-guom.png"
+    >
+      <WaterPuppetActivity />
+    </WaterPuppetArticle>
     <div>
       <AppButtonRed class="btn-bottom feedback">
         <img src="icons/gio.svg" alt="cai-gio-bat-ca">
@@ -36,13 +40,13 @@ export default {
         description:
           'Múa rối nước (hay còn gọi là trò rối nước) được coi là nét văn hóa phi vật thể dân gian đặc sắc của dân tộc Việt Nam.',
         background: 'images/ngu-ong.png'
-      },
-      {
-        title: 'Biểu Diễn',
-        description:
-          'Trong biểu diễn rối nước không chỉ có con rối mà lời ca của nghệ sĩ và cách diễn rối của nghệ nhân quan trọng không kém. ',
-        background: 'images/ho-guom.png'
       }
+      // {
+      //   title: 'Biểu Diễn',
+      //   description:
+      //     'Trong biểu diễn rối nước không chỉ có con rối mà lời ca của nghệ sĩ và cách diễn rối của nghệ nhân quan trọng không kém. ',
+      //   background: 'images/ho-guom.png'
+      // }
     ]);
 
     return {

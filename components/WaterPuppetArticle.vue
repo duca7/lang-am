@@ -10,13 +10,17 @@
     <div class="water-puppet_description">
       <p>{{ description }}</p>
       <div>
-        <AppButtonNavigation />
+        <AppButtonNavigation is-open="isOpen" @click="toggle" />
       </div>
     </div>
+    <transition>
+      <slot v-if="isOpen" />
+    </transition>
   </article>
 </template>
 
 <script>
+
 export default {
   props: {
     title: {
@@ -31,7 +35,18 @@ export default {
       type: String,
       default: 'default'
     }
+  },
+  data () {
+    return {
+      isOpen: false
+    };
+  },
+  methods: {
+    toggle () {
+      this.isOpen = !this.isOpen;
+    }
   }
+
 };
 </script>
 
