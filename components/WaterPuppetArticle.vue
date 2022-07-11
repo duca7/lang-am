@@ -10,7 +10,7 @@
     <div class="water-puppet_description">
       <p>{{ description }}</p>
       <div>
-        <AppButtonNavigation is-open="isOpen" @click="toggle" />
+        <AppButtonNavigation @click="toggle" />
       </div>
     </div>
     <transition>

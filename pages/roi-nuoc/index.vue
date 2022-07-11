@@ -90,6 +90,7 @@ export default {
 }
   .overlay {
     @include overlay("/images/la-sen-lon.png");
+    background-position: 70%;
   }
 }
 
