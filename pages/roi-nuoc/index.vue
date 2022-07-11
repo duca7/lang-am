@@ -25,7 +25,7 @@
       </AppButtonRed>
     </div>
 
-    <div class="overlay" />
+    <!-- <div class="overlay" /> -->
   </main>
 </template>
 
@@ -61,7 +61,8 @@ export default {
   width: 100%;
   position: relative;
 
-  .title,.desc {
+  .title,
+  .desc {
     padding: 0 1rem;
   }
 
@@ -70,9 +71,9 @@ export default {
     bottom: 0px;
     right: 0px;
     z-index: 1;
-}
+  }
 
-.feedback {
+  .feedback {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,13 +86,12 @@ export default {
     font-size: 1.25rem;
     font-weight: 400;
     img {
-        padding-right: 1rem;
+      padding-right: 1rem;
     }
-}
+  }
   .overlay {
     @include overlay("/images/la-sen-lon.png");
     background-position: 70%;
   }
 }
-
 </style>
