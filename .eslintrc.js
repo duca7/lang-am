@@ -25,7 +25,6 @@ module.exports = {
       'error',
       { vars: 'all', args: 'after-used', ignoreRestSiblings: false }
     ],
-    // 'vue/no-multiple-template-root': 0,
     'vue/require-default-prop': 0
   }
 };

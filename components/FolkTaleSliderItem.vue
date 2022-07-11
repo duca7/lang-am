@@ -1,15 +1,15 @@
-<!-- eslint-disable vue/no-multiple-template-root -->
 <template>
-  <img :alt="item.displayName" :src="item.displayImage">
-  <p class="show-name">
-    {{ item.displayName }}
-  </p>
-  <div class="show-info">
-    <p class="show-date">
-      {{ item.date }}
-    </p>
-    <span class="show-rate">{{ item.rate }}<img src="/icons/rating.svg">
-    </span>
+  <div>
+    <img class="image" :alt="item.displayName" :src="item.displayImage">
+    <div class="show-box">
+      <p class="name">
+        {{ item.displayName }}
+      </p>
+      <p class="date">
+        {{ item.date }}
+      </p>
+      <span class="rate">{{ item.rate }}<AppStartIcon /></span>
+    </div>
   </div>
 </template>
 
@@ -25,28 +25,36 @@ export default {
 </script>
 
 <style lang="scss">
-.show {
+.image {
+  --ratio: 150px;
+  width: var(--ratio);
+  height: var(--ratio);
+  object-fit: cover;
+}
 
-  &-name {
+.show-box {
+  --font-size: 0.9em;
+  display: grid;
+  grid-template-columns: 1fr 2rem;
+  row-gap: 0.3rem;
+  margin-top: 0.3rem;
+
+  .name {
     font-size: 1.2rem;
     margin-top: 0.5rem;
     font-weight: bold;
+    grid-column: span 2;
   }
 
-  &-info {
-    font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 0.3em;
-  }
-
-  &-date {
+  .date {
     font-family: "Montserrat", sans-serif;
+    font-size: var(--font-size);
   }
 
-  &-rate {
+  .rate {
     vertical-align: baseline;
+    line-height: 1.2rem;
+    font-size: var(--font-size);
     font-family: "MTD Valky Bold", "Raleway", sans-serif;
   }
 }
