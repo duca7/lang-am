@@ -9,6 +9,7 @@
       description="Địa điểm biểu diễn những tiết mục múa rối nước dân gian Việt Nam duy nhất ở Tp. Hồ Chí Minh được diễn ra trên sân khấu nước."
       background="/images/bat-tien-bg.png"
     />
+    <GoldDragonDescription />
 
     <GoldDragonArtist />
 
