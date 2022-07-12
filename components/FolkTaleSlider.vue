@@ -2,7 +2,7 @@
   <div class="category">
     <div class="category-title">
       <AppTitle :level="2" :title="title" />
-      <AppArrowLeft />
+      <AppArrowLeftIcon />
     </div>
     <div ref="slider" class="category-slider" @scroll="trackScroll">
       <FolkTaleSliderItem v-for="item in shows" :key="item.displayName" :item="item" class="category-item" @click="navigate(item.slug)" />
@@ -17,9 +17,9 @@ export default {
   },
 
   setup (props) {
-    const { findByCategory, getShowName } = useShows();
+    const { findByCategory, getShowCategory } = useShows();
     const router = useRouter();
-    const title = getShowName(props.category);
+    const title = getShowCategory(props.category);
     const shows = findByCategory(props.category);
 
     return { title, shows, router };

@@ -1,19 +1,18 @@
 <template>
   <header class="nav">
-    <!-- <NuxtLink to="/"> -->
-    <img id="logo" src="/images/logo.png" @click="navigate('/')">
-    <!-- </NuxtLink> -->
+    <img v-if="isLogoVisible" id="logo" src="/images/logo.png" @click="navigate('/')">
+    <AppBackIcon v-else @click="back" />
     <AppHeaderHamburger />
   </header>
 </template>
 
-<script>
-export default {
-  setup () {
-    const { navigate } = useSidebar();
-    return { navigate };
-  }
-};
+<script setup>
+const { path, routes, back, navigate } = useSidebar();
+
+const allRoutes = [...routes, { path: '/' }];
+
+const isLogoVisible = computed(() => allRoutes.some(r => r.path === path.value));
+
 </script>
 
 <style lang="scss">

@@ -11,3 +11,9 @@
   height: 100%;
   background-color: #000;
 }
+
+@mixin center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

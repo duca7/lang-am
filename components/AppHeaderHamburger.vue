@@ -1,18 +1,13 @@
 <template>
-  <div class="hamburger" @click="toggle">
+  <div class="hamburger" @click="toggle()">
     <span :class="{ active: isOpen }" />
     <span :class="{ active: isOpen }" />
     <span :class="{ active: isOpen }" />
   </div>
 </template>
 
-<script>
-export default {
-  setup () {
-    const { isOpen, toggle } = useSidebar();
-    return { isOpen, toggle };
-  }
-};
+<script setup>
+const { isOpen, toggle } = useSidebar();
 </script>
 
 <style lang="scss">
