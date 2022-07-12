@@ -1,8 +1,7 @@
 <template>
   <article class="water-puppet">
     <div class="water-puppet_title">
-      <h1>{{ title }}</h1>
-      <img src="images/icon-art-work.png" alt="" width="52px" height="19px" class="title-icon">
+      <AppTitle :level="2" :title="title" />
     </div>
     <div class="water-puppet_bg">
       <img :src="background" alt="hinh-roi-nuoc">
@@ -39,6 +38,7 @@ export default {
   data () {
     return {
       isOpen: false
+
     };
   },
   methods: {
