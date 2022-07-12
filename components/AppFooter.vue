@@ -3,19 +3,19 @@
     <aside class="information">
       <h4>Nhà hát rồng vàng</h4>
       <span>Địa chỉ</span>
-      <p class="font-mst">
+      <p class="font-msr">
         55B Nguyễn Thị Minh Khai, Phường Bến Thành, Quận 1, TP. HCM
       </p>
       <span>Email</span>
-      <p class="font-mst">
+      <p class="font-msr">
         NhahatRongVang@gmail.com.vn
       </p>
       <span>Số điện thoại</span>
-      <p class="font-mst">
+      <p class="font-msr">
         0258 3856 068
       </p>
       <span>Giờ mở của</span>
-      <p class="font-mst">
+      <p class="font-msr">
         Mọi ngày (9:00 - 18:00)
       </p>
     </aside>

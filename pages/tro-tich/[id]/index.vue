@@ -23,7 +23,7 @@
         động mưu sinh thường nhật và cũng là một thú vui thư giãn của người nông
         dân Việt Nam..
       </p>
-      <AppButtonRed size="large" class="ticketing">
+      <AppButtonRed size="large" class="ticketing" @click="toInfo">
         <AppCartIcon />
         <span>Mua vé</span>
       </AppButtonRed>
@@ -45,32 +45,27 @@
   </div>
 </template>
 
-<script>
-export default {
-  setup () {
-    const router = useRouter();
-    const { take, findBySlug } = useShows();
-    const route = useRoute();
-    const shows = take(6);
-    const show = findBySlug(route.params.id);
-    const stars = [1, 2, 3, 4, 5];
-    return { shows, router, show, stars };
-  },
-  computed: {
-    backgroundStyle () {
-      const gradient =
-        'linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(23, 1, 1, 0) 25%)';
-      return {
-        background: `${gradient}, url(${this.show.displayImage}) no-repeat top`,
-        backgroundSize: 'auto 85%'
-      };
-    }
-  },
-  methods: {
-    navigate (slug) {
-      this.router.push(`/tro-tich/${slug}`);
-    }
-  }
+<script setup>
+const { take, findBySlug } = useShows();
+const router = useRouter();
+const route = useRoute();
+
+const shows = take(6);
+const show = findBySlug(route.params.id);
+const stars = [1, 2, 3, 4, 5];
+
+function toInfo () {
+  router.push(`${route.path}/info`);
+}
+
+function navigate (slug) {
+  this.router.push(`/tro-tich/${slug}`);
+}
+
+const gradient = 'linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(23, 1, 1, 0) 25%)';
+const backgroundStyle = {
+  background: `${gradient}, url(${show.displayImage}) no-repeat top`,
+  backgroundSize: 'auto 85%'
 };
 </script>
 

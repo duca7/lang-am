@@ -6,55 +6,12 @@
           v-for="route in routes"
           :key="route.id"
           class="route"
-          :class="{ active: active(route.path) }"
+          :class="{ active: curPath === route.path }"
           @click="navigate(route.path)"
         >
-          <svg
-            width="24"
-            height="22"
-            viewBox="0 0 24 22"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M9.19141 6.60921C9.29349 5.49307 9.83464 2.8889 11.7956 1.40088C12.5102 2.26911 14.1549 4.52588 14.3997 6.60921"
-              stroke="#5E0101"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M11.6659 20.1509C7.25442 19.3931 -0.861205 14.5832 1.96171 1.40088C5.68671 2.25296 12.843 7.19619 11.6664 20.1509H11.6659Z"
-              stroke="#5E0101"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M11.9226 20.1509C16.334 19.3931 24.4497 14.5832 21.6267 1.40088C17.9017 2.25296 10.7455 7.19619 11.922 20.1509H11.9226Z"
-              stroke="#5E0101"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
+          <AppSenIcon class="icon" />
           <span>{{ route.displayText }}</span>
-          <svg
-            width="22"
-            height="16"
-            viewBox="0 0 22 16"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M0.828125 7.95745H21.7372C19.2372 8.18028 14.4645 9.05384 13.5554 14.9365"
-              stroke="#5E0101"
-            />
-            <path
-              d="M0.828125 7.9571H21.7372C19.2372 7.73427 14.4645 6.86071 13.5554 0.978027"
-              stroke="#5E0101"
-            />
-          </svg>
+          <AppArrowIcon class="icon icon-arrow" />
         </li>
       </ul>
       <div class="bottom">
@@ -76,62 +33,16 @@
   </transition>
 </template>
 
-<script>
-import { ref } from 'vue';
+<script setup>
+const { isOpen, navigate, routes, path: curPath } = useSidebar();
 
-export default {
-  setup () {
-    const routes = ref([
-      {
-        displayText: 'Rối Nước',
-        path: '/roi-nuoc'
-      },
-      {
-        displayText: 'Trò Tích',
-        path: '/tro-tich'
-      },
-      {
-        displayText: 'Rồng Vàng'
-      },
-      {
-        displayText: 'Booking'
-      },
-      {
-        displayText: 'Lưu niệm'
-      },
-      {
-        displayText: 'Liên Hệ',
-        path: '/lien-he'
-      }
-    ]);
-    const { isOpen, navigate: nav } = useSidebar();
-    const { path } = useRoute();
-
-    return {
-      routes,
-      isOpen,
-      path,
-      nav
-    };
-  },
-  watch: {
-    isOpen () {
-      // path.includes;
-    }
-  },
-  methods: {
-    active (path) {
-      return this.path === path;
-    },
-    navigate (path) {
-      this.path = path;
-      this.nav(path);
-    }
-  }
-};
+// function nextRoute (_path) {
+//   curPath.value = _path;
+//   navigate(() => router.push(_path));
+// }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .route {
   font-size: 1.875rem;
   display: flex;
@@ -145,6 +56,16 @@ export default {
     flex: 1;
   }
 
+  .icon {
+    path {
+      stroke: $primary-dark-red-300;
+    }
+
+    &-arrow {
+      transform: scale(1.4);
+    }
+  }
+
   &.active {
     background: linear-gradient(
       90deg,
@@ -153,7 +74,8 @@ export default {
       rgba(0, 0, 0, 0.8104283949908089) 87%,
       rgba(0, 0, 0, 0) 100%
     );
-    svg {
+
+    svg.icon {
       path {
         stroke: #fff;
       }

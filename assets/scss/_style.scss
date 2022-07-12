@@ -11,7 +11,6 @@ h2 {
 html {
   color: #fff;
   font-family: 'Raleway', sans-serif;
-  // font-size: 16px;
   background-color: #000;
 }
 
@@ -27,9 +26,18 @@ body {
 
 .container {
   padding-top: $navbar-height;
-  overflow-x: hidden;
 }
 
-.font-mst {
-  font-family: 'Montserrat', sans-serif;
+.font {
+  &-msr {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  &-mtd {
+    font-family: 'MTD Valky Bold', 'Raleway', sans-serif;
+  }
+
+  &-rlw {
+    font-family: 'Raleway', sans-serif;
+  }
 }
