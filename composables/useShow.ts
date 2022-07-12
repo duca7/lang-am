@@ -5,6 +5,7 @@ type Show = {
   displayImage: string;
   date: string;
   rate: number;
+  time: string;
 }
 
 export const useShows = () => {
@@ -23,11 +24,11 @@ export const useShows = () => {
     return Object.values(shows).slice(0, number);
   }
 
-  function getShowName (title: string) {
+  function getShowCategory (title: string) {
     return showsNameMap[title];
   }
 
-  return { findBySlug, findByCategory, getShowName, take };
+  return { findBySlug, findByCategory, getShowCategory, take };
 };
 
 const shows: Record<string, Show> = {
@@ -37,7 +38,9 @@ const shows: Record<string, Show> = {
     slug: 'cau-ca',
     displayImage: '/images/cheo-thuyen-thung.png',
     date: 'Thứ 2 và thứ 4',
-    rate: 8.5
+    rate: 8.5,
+    time: '12 phút'
+
   },
   'bat-vit-1': {
     category: 'doi-thuong',
@@ -45,7 +48,9 @@ const shows: Record<string, Show> = {
     displayName: 'Bắt vịt',
     displayImage: '/images/cau-ca.png',
     date: 'Thứ 2 và thứ 4',
-    rate: 8.5
+    rate: 8.5,
+    time: '12 phút'
+
   },
   'bat-vit': {
     category: 'doi-thuong',
@@ -53,7 +58,9 @@ const shows: Record<string, Show> = {
     displayName: 'Bắt vịt',
     displayImage: '/images/chu-teu.png',
     date: 'Thứ 2 và thứ 4',
-    rate: 8.5
+    rate: 8.5,
+    time: '12 phút'
+
   },
   'trong-lua': {
     category: 'doi-thuong',
@@ -61,7 +68,9 @@ const shows: Record<string, Show> = {
     displayName: 'Trồng lúa',
     displayImage: '/images/cau-ca.png',
     date: 'Thứ 2 và thứ 4',
-    rate: 8.5
+    rate: 8.5,
+    time: '12 phút'
+
   },
   'bat-tien': {
     category: 'le-hoi',
@@ -69,7 +78,9 @@ const shows: Record<string, Show> = {
     displayName: 'Bát tiên',
     displayImage: '/images/cau-ca.png',
     date: 'Thứ 2 và thứ 4',
-    rate: 8.5
+    rate: 8.5,
+    time: '12 phút'
+
   },
   'mua-rong': {
     category: 'le-hoi',
@@ -77,7 +88,9 @@ const shows: Record<string, Show> = {
     displayName: 'Múa rồng',
     displayImage: '/images/cau-ca.png',
     date: 'Thứ 2 và thứ 4',
-    rate: 8.5
+    rate: 8.5,
+    time: '12 phút'
+
   },
   'mua-lan': {
     category: 'le-hoi',
@@ -85,7 +98,9 @@ const shows: Record<string, Show> = {
     displayName: 'Múa lân',
     displayImage: '/images/cau-ca.png',
     date: 'Thứ 2 và thứ 4',
-    rate: 8.5
+    rate: 8.5,
+    time: '12 phút'
+
   },
   'tra-guom': {
     category: 'tich-co',
@@ -93,7 +108,9 @@ const shows: Record<string, Show> = {
     displayName: 'Trả gươm',
     displayImage: '/images/cau-ca.png',
     date: 'Thứ 2 và thứ 4',
-    rate: 8.5
+    rate: 8.5,
+    time: '12 phút'
+
   },
   'thach-sanh': {
     category: 'tich-co',
@@ -101,7 +118,9 @@ const shows: Record<string, Show> = {
     displayName: 'Thạch sanh',
     displayImage: '/images/cau-ca.png',
     date: 'Thứ 2 và thứ 4',
-    rate: 8.5
+    rate: 8.5,
+    time: '12 phút'
+
   },
   'tam-cam': {
     category: 'tich-co',
@@ -109,7 +128,8 @@ const shows: Record<string, Show> = {
     displayName: 'Tấm cám',
     displayImage: '/images/cau-ca.png',
     date: 'Thứ 2 và thứ 4',
-    rate: 8.5
+    rate: 8.5,
+    time: '12 phút'
   }
 };
 
