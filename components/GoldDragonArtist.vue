@@ -19,16 +19,28 @@
     <GoldDragonArtistArticle first-name="Vương" last-name="Minh Lợi" description=" Nghệ sĩ ưu tú 20 năm tuổi nghề">
       <img src="/images/minh-loi.png" alt="avatar" class="avatar">
     </GoldDragonArtistArticle>
+    <div class="overlay" />
   </div>
 </template>
 
 <style lang="scss">
 .gold-dragon{
-  padding: 1rem 1rem;
-
+  padding: 1rem;
+  position: relative;
   .avatar{
     order: 2;
   }
-
+.overlay{
+  content: '';
+  z-index: -1;
+  position: absolute;
+  background-image: url('/images/la-sen-ngang.png');
+  background-repeat: no-repeat;
+  top:2%;
+  right: 0;
+  width: 250px;
+  height: 250px;
+  opacity: 0.6;
+  }
 }
 </style>

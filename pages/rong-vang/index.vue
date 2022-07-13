@@ -58,5 +58,4 @@
       padding-right: 1rem;
     }
   }
-
 </style>
