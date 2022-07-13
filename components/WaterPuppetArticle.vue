@@ -1,8 +1,7 @@
 <template>
   <article class="water-puppet">
     <div class="water-puppet_title">
-      <h1>{{ title }}</h1>
-      <img src="images/icon-art-work.png" alt="" width="52px" height="19px" class="title-icon">
+      <AppTitle :level="2" :title="title" />
     </div>
     <div class="water-puppet_bg">
       <img :src="background" alt="hinh-roi-nuoc">
@@ -10,13 +9,17 @@
     <div class="water-puppet_description">
       <p>{{ description }}</p>
       <div>
-        <AppButtonNavigation />
+        <AppButtonNavigation @click="toggle" />
       </div>
     </div>
+    <transition>
+      <slot v-if="isOpen" />
+    </transition>
   </article>
 </template>
 
 <script>
+
 export default {
   props: {
     title: {
@@ -31,7 +34,19 @@ export default {
       type: String,
       default: 'default'
     }
+  },
+  data () {
+    return {
+      isOpen: false
+
+    };
+  },
+  methods: {
+    toggle () {
+      this.isOpen = !this.isOpen;
+    }
   }
+
 };
 </script>
 

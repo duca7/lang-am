@@ -39,7 +39,8 @@ const routes = [
     path: '/tro-tich'
   },
   {
-    displayText: 'Rồng Vàng'
+    displayText: 'Rồng Vàng',
+    path: '/rong-vang'
   },
   {
     displayText: 'Booking'
