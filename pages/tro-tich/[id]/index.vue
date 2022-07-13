@@ -6,7 +6,7 @@
           <h2 class="name">
             {{ show.displayName }}
           </h2>
-          <span class="rate">
+          <span class="rate font-mtd">
             <AppStartIcon
               v-for="star in stars"
               :key="star"
@@ -95,7 +95,7 @@ const backgroundStyle = {
     }
 
     button {
-      font-size: 1em;
+      font-size: 1rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -104,6 +104,7 @@ const backgroundStyle = {
       border: 0.5px solid #fff;
       color: #fff;
       border-radius: 5px;
+      font-weight:700;
       background: transparent;
       margin-left: 0.5em;
     }

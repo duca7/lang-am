@@ -66,7 +66,11 @@
       />
     </div>
 
-    <AppButtonRed size="large" class="booking-extra__continue" @click="goToCreditCardInfo">
+    <AppButtonRed
+      size="large"
+      class="booking-extra__continue"
+      @click="goToCreditCardInfo"
+    >
       <span>Thanh Toán</span>
       <AppMoneyBagIcon />
     </AppButtonRed>
@@ -81,13 +85,16 @@ const route = useRoute();
 function goToCreditCardInfo () {
   navigate(`/booking/${route.params.id}/credit-card`);
 }
-
 </script>
 
 <style scoped lang="scss">
 .booking-extra {
   &__section {
     padding: 0 1rem;
+
+    .app-input {
+      margin-top: 1.3rem;
+    }
   }
 
   &__heading {
@@ -129,7 +136,7 @@ function goToCreditCardInfo () {
 
   &__coupon {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 7fr 5fr;
     column-gap: 2rem;
     margin-top: 1rem;
     .app-input {
@@ -147,9 +154,9 @@ function goToCreditCardInfo () {
       color: white;
       background: none;
       border: 1px solid $primary-dark-red-100;
+      font-weight: 500;
       font-size: 1.1rem;
-      font-size: 1rem;
-      padding: 0.4rem 1.3rem;
+      padding: 0.6rem 1.3rem;
       align-self: end;
       border-radius: 8px;
     }
@@ -161,7 +168,8 @@ function goToCreditCardInfo () {
     margin-top: 1rem;
 
     p {
-      font-size: 0.9rem;
+      font-size: 1rem;
+      font-weight: 400;
     }
 
     span {

@@ -53,8 +53,8 @@ $transition: all 0.1s;
   align-items: center;
   background: none;
   border: 1px solid #b5b5b5;
-  margin-top: 0.5rem;
-  padding: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.7rem 0.5rem;
   width: 100%;
   border-radius: 8px;
   gap: 1rem;
@@ -75,7 +75,7 @@ $transition: all 0.1s;
 
     strong {
       font-weight: 500;
-      font-size: 1.1em;
+      font-size: 1.2em;
     }
 
     span {
