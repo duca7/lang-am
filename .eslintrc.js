@@ -25,6 +25,7 @@ module.exports = {
       'error',
       { vars: 'all', args: 'after-used', ignoreRestSiblings: false }
     ],
-    'vue/require-default-prop': 0
+    'vue/require-default-prop': 0,
+    'vue/multi-word-component-names': 0
   }
 };

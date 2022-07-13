@@ -1,5 +1,5 @@
 <template>
-  <button :class="`app-button ${buttonSize}`">
+  <button :class="`app-button ${buttonSize} font-rlw `">
     <slot />
   </button>
 </template>
@@ -19,7 +19,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .app-button {
   background-color: $primary-dark-red-400;
   color: white;
@@ -28,6 +28,12 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  span{
+    font-weight: 500;
+    font-size: 1.1em;
+    margin:0 5px;
+  }
 
   &.small {
     padding: 0.8rem 1.5rem;

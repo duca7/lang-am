@@ -485,7 +485,8 @@ function onSeatClick ({ target }) {
 }
 
 onMounted(() => seatMap.value.addEventListener('click', onSeatClick));
-onUnmounted(() => seatMap.value.removeEventListener('click', onSeatClick));
+
+onBeforeUnmount(() => seatMap.value.removeEventListener('click', onSeatClick));
 </script>
 
 <style lang="scss">
