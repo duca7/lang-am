@@ -1,7 +1,7 @@
 <template>
   <article class="water-puppet">
     <div class="water-puppet_title">
-      <AppTitle :level="2" :title="title" />
+      <AppTitle :level="3" :title="title" />
     </div>
     <div class="water-puppet_bg">
       <img :src="background" alt="hinh-roi-nuoc">
