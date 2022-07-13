@@ -4,21 +4,28 @@
 
 <style lang="scss" scoped>
 .app-input {
-  $input-color:#797979;
+  $input-color:#B3B3B3;
 
-  margin-top: 20px;
   background: none;
   width: 100%;
-  padding-top: 0.5em 0 0.3em;
+  padding: 0 0 0.5rem;
+  margin-top: 0.5rem;
   font-weight: 600;
   outline: 0;
   border: none;
-  font-size: 1.1rem;
+  font-size: 1rem;
   border-bottom: 1px solid $input-color;
   color: $input-color;
 
-  :focus {
+  &:focus {
     border-color: #fff;
+  }
+
+  &::placeholder{
+    color: inherit;
+    opacity: 0.9;
+    font-weight: 500;
+    font-size: 0.9em;
   }
 }
 </style>
