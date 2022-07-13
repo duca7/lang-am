@@ -1,7 +1,7 @@
 <template>
   <header class="nav">
     <img v-if="isLogoVisible" id="logo" src="/images/logo.png" @click="navigate('/')">
-    <AppBackIcon v-else @click="back" />
+    <AppBackIcon v-else @click="back()" />
     <AppHeaderHamburger />
   </header>
 </template>

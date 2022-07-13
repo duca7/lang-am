@@ -115,10 +115,6 @@ const backgroundStyle = {
   }
   .ticketing {
     margin-top: 1rem;
-    span {
-      font-size: 1.05rem;
-      margin-left: 0.3rem;
-    }
   }
 }
 

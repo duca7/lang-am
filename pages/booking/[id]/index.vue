@@ -74,7 +74,7 @@
         </div>
       </div>
     </div>
-    <AppButtonRed size="large" class="booking-ticket__continue">
+    <AppButtonRed size="large" class="booking-ticket__continue" @click="goToExtraInfo()">
       <span>Tiếp tục</span>
       <AppArrowIcon />
     </AppButtonRed>
@@ -84,6 +84,13 @@
 <script setup>
 const a = ref(2);
 const price = ref('240.000đ');
+
+const { navigate, path } = useSidebar();
+
+function goToExtraInfo () {
+  navigate(`${path.value}/extra-information`);
+}
+
 </script>
 
 <style lang="scss">
@@ -117,7 +124,7 @@ const price = ref('240.000đ');
       font-weight: 500;
     }
     span {
-      font-weight: 100;
+      font-weight: 300;
       display: inline-block;
       padding: 0.5rem 0;
     }
@@ -142,7 +149,7 @@ const price = ref('240.000đ');
     flex-wrap: nowrap;
 
     p {
-      font-weight: 100;
+      font-weight: 300;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -188,7 +195,7 @@ const price = ref('240.000đ');
         padding-bottom: 0.5em;
       }
       span {
-        font-weight: 100;
+        font-weight: 300;
       }
     }
     &-price {
@@ -201,12 +208,6 @@ const price = ref('240.000đ');
 
   &__continue {
     margin: 2rem auto 1rem;
-    padding: 1rem 0;
-
-    span {
-      font-size: 1.05rem;
-      margin-right: 0.3rem;
-    }
   }
 }
 </style>

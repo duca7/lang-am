@@ -2,7 +2,7 @@
   <div class="container">
     <main class="show-info">
       <div class="show-info__caption">
-        <h2 class="show-info__name">
+        <h2>
           {{ show.displayName }}
         </h2>
         <span class="show-info__rate font-mtd">{{ show.rate }}<AppStartIcon /></span>
@@ -28,7 +28,7 @@
           <span>{{ ticket.price }}</span>
         </button>
       </div>
-      <AppButtonRed size="large" class="ticket-info__continue-button" @click="toBooking">
+      <AppButtonRed size="large" class="ticket-info__continue" @click="toBooking">
         <span>Tiếp tục</span>
         <AppArrowIcon />
       </AppButtonRed>
@@ -124,14 +124,8 @@ function toBooking () {
     }
   }
 
-  &__continue-button {
+  &__continue {
     margin: 2rem auto 1rem;
-    padding: 1rem 0;
-
-    span {
-      font-size: 1.05rem;
-      margin-right: 0.3rem;
-    }
   }
 }
 </style>
