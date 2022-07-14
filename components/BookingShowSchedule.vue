@@ -157,6 +157,7 @@ const showOctober = [
 <style lang="scss" scoped>
   section{
     padding: 1rem;
+    width: 100%;
     .month{
       display: flex;
       justify-content: space-between;

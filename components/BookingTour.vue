@@ -30,7 +30,7 @@
       </AppButtonRed>
     </article>
     <article>
-      <img src="/images/tour-sg-3.png" alt="tour-sg-3" width="100%" class="lotus-left">
+      <img src="/images/tour-sg-3.png" alt="tour-sg-3" width="100%">
       <div class="tour-title">
         <h3>Rong ca chiều thứ 7</h3>
         <AppBookLotusRed class="lotus-left" />
@@ -64,7 +64,7 @@
 section{
     padding: 1rem;
     article{
-        margin-top: 1.5rem;
+        padding-top: 1.5rem;
 
         .tour-title{
             display: flex;
