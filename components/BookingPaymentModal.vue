@@ -17,11 +17,37 @@
       </div>
     </div>
 
-    <div class="booking-bill__section">
+    <div class="booking-bill__section receipt">
       <div class="booking-bill__receipt">
-        <img class="booking-bill__receipt-img" src="/images/bill.png">
+        <h2>{{ show.displayName }}</h2>
+        <p class="booking-bill__receipt-time">
+          {{ show.time }} <span>|</span>{{ category }}
+        </p>
+        <p class="booking-bill__receipt-desc">
+          Nhà Hát Rồng Vàng
+        </p>
+        <p class="booking-bill__receipt-desc font-msr">
+          10:00 - 10:50
+        </p>
+        <p class="booking-bill__receipt-desc font-msr">
+          14/08/2022
+        </p>
+        <div class="booking-bill__receipt-extra font-mtd">
+          <strong>D03 D04</strong><span>240.000đ</span>
+        </div>
       </div>
+      <img class="booking-bill__receipt-img" src="/images/bill.png">
+      <img class="booking-bill__receipt-qr" src="/images/qr-code.png">
     </div>
+
+    <AppButtonRed
+      size="large"
+      class="booking-bill__continue"
+      @click="gotoHome()"
+    >
+      <span>Tải về</span>
+      <AppDownloadIcon />
+    </AppButtonRed>
 
     <div class="overlay" />
   </div>
@@ -34,6 +60,19 @@ const props = defineProps({
     require: true
   }
 });
+
+const { findBySlug, getShowCategory } = useShows();
+const { navigate } = useSidebar();
+
+const route = useRoute();
+
+const show = findBySlug(route.params.id);
+const category = getShowCategory(show.category);
+
+const gotoHome = () => {
+  navigate('/tro-tich');
+};
+
 </script>
 
 <style lang="scss" scoped>
@@ -45,9 +84,16 @@ const props = defineProps({
   min-height: 100vh;
   background-color: black;
   z-index: 1;
+  padding-bottom: 3rem;
 
-  &__section{
-    padding:0 1rem;
+  &__section {
+    margin: 0 1rem;
+    position: relative;
+
+    &.receipt {
+      margin-left: 0.5rem;
+      margin-top: 2rem
+    }
   }
 
   &__notify {
@@ -88,10 +134,51 @@ const props = defineProps({
   }
 
   &__receipt {
+    position: absolute;
+    top: 36%;
+    left: 2.5rem;
+    right: 1.5rem;
+    bottom: 0;
 
-    &-img{
+    &-time {
+      font-weight: 300;
+      margin-top: 0.5rem;
+      span {
+        margin: 0 0.5em;
+      }
+    }
+
+    &-desc {
+      border-bottom: 1px solid #fff;
+      font-size: 1.1rem;
+      font-weight: 600;
+      padding: 1rem 0 0.3rem;
+    }
+
+    &-img {
       width: 100%;
+    }
+
+    &-qr {
+      position: absolute;
+      bottom: 5%;
+      left: 2.5rem;
+    }
+
+    &-extra {
+      margin-top: 30%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      strong {
+        font-size: 1.5rem;
+      }
+    }
   }
+
+  &__continue {
+    margin: 2rem auto 1rem;
   }
 
   .overlay {
