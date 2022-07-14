@@ -213,7 +213,7 @@ const showOctober = [
 
       .sold-out-1{
         top:60%;
-         right: 0;
+        right: 0;
         background: #707070;
         color: #000;
       }
