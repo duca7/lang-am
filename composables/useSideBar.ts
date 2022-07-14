@@ -1,4 +1,5 @@
 export function useSidebar () {
+  const { unfreezing } = useFreezingScreen();
   const router = useRouter();
   const route = useRoute();
   const isOpen = useState<boolean>('isOpen', () => false);
@@ -6,6 +7,7 @@ export function useSidebar () {
 
   router.afterEach((to) => {
     path.value = to.path;
+    unfreezing();
   });
 
   function toggle () {

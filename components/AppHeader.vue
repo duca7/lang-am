@@ -20,7 +20,7 @@ const isLogoVisible = computed(() => allRoutes.some(r => r.path === path.value))
     position: fixed;
     box-sizing: border-box;
     background: black;
-    z-index: 1;
+    z-index: 2;
 
     display: flex;
     justify-content: space-between;

@@ -35,11 +35,6 @@
 
 <script setup>
 const { isOpen, navigate, routes, path: curPath } = useSidebar();
-
-// function nextRoute (_path) {
-//   curPath.value = _path;
-//   navigate(() => router.push(_path));
-// }
 </script>
 
 <style lang="scss">
@@ -52,6 +47,8 @@ const { isOpen, navigate, routes, path: curPath } = useSidebar();
 
   span {
     color: $primary-dark-red-300;
+    font-size: 1.7rem;
+    font-weight: 500;
     margin-left: 1rem;
     flex: 1;
   }
@@ -131,6 +128,7 @@ const { isOpen, navigate, routes, path: curPath } = useSidebar();
   margin-top: $navbar-height;
   height: $sidebar-height;
   background-color: #000;
+  border: 1px solid #000;
   z-index: 2;
 }
 

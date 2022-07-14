@@ -31,27 +31,51 @@
     <AppButtonRed
       size="large"
       class="booking-credit__continue"
-      @click="goToCreditCardInfo()"
+      @click="completeTransaction()"
     >
       <span>Thanh Toán</span>
       <AppMoneyBagIcon />
     </AppButtonRed>
 
     <div class="booking-credit__section">
+      <p class="booking-credit__contact-title">
+        Liên hệ CSKH
+      </p>
       <div class="booking-credit__contact">
         <button class="booking-credit__contact-button">
+          <AppRongVangLogo />
+          <div class="booking-credit__contact-extra">
+            <strong>Rồng Vàng</strong>
+            <span class="font-msr">1900 22 24 88</span>
+          </div>
+        </button>
+
+        <button class="booking-credit__contact-button">
           <AppPayooLogo />
+          <div class="booking-credit__contact-extra">
+            <strong>Payoo</strong>
+            <span class="font-msr">1900 54 54 78</span>
+          </div>
         </button>
       </div>
     </div>
+    <BookingPaymentModal :is-modal-open="isModalOpen" />
   </div>
 </template>
 
 <script setup>
+const isModalOpen = ref(false);
+
+function completeTransaction () {
+  isModalOpen.value = true;
+}
+
 </script>
 
 <style scoped lang="scss">
 .booking-credit {
+  position: relative;
+
   &__section {
     padding: 0 1rem;
 
@@ -93,15 +117,15 @@
     }
   }
 
-  &__guarantee{
+  &__guarantee {
     display: flex;
     align-items: center;
     margin-top: 1.3rem;
 
-    span{
+    span {
       display: inline-block;
       padding-left: 0.4rem;
-      color:$primary-dark-red-100;
+      color: $primary-dark-red-100;
     }
   }
 
@@ -109,8 +133,38 @@
     margin: 2rem auto 1rem;
   }
 
-  &__contact{
+  &__contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 2rem;
 
+    &-button {
+      width: 48%;
+      align-items: center;
+      background: none;
+      border: 1px solid #949292;
+      border-radius: 8px;
+      display: flex;
+      gap: 0.8rem;
+      padding: 0.7rem 0.4rem;
+    }
+
+    &-extra {
+      text-align: start;
+
+      strong {
+        display: block;
+        font-weight: 500;
+      }
+    }
+
+    &-title {
+      text-align: center;
+      font-weight: 400;
+      font-size: 1.3rem;
+      margin: 2rem 0 1rem;
+    }
   }
 }
 </style>
