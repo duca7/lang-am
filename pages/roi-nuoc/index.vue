@@ -34,9 +34,8 @@
   width: 100%;
   position: relative;
 
-  .title,
-  .desc {
-    padding: 0 1rem;
+  .app-title{
+    padding: 1rem;
   }
 
   .btn-bottom {
