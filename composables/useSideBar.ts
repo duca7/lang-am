@@ -43,7 +43,8 @@ const routes = [
     path: '/rong-vang'
   },
   {
-    displayText: 'Booking'
+    displayText: 'Booking',
+    path: '/booking'
   },
   {
     displayText: 'Lưu niệm'
