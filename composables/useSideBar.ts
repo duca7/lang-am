@@ -48,7 +48,8 @@ const routes = [
     displayText: 'Booking'
   },
   {
-    displayText: 'Lưu niệm'
+    displayText: 'Lưu niệm',
+    path: '/luu-niem'
   },
   {
     displayText: 'Liên Hệ',
