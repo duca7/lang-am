@@ -1,7 +1,9 @@
 <template>
   <div class="container booking-credit">
     <div class="booking-credit__section">
-      <h2>Nhà hát Rồng Vàng Payoo</h2>
+      <h2 class="theatre-name">
+        Nhà hát Rồng Vàng Payoo
+      </h2>
       <div class="booking-credit__info">
         <h4 class="booking-credit__title">
           Thông tin thẻ
@@ -94,6 +96,10 @@ function completeTransaction () {
 
   &__section {
     padding: 0 1rem;
+
+    .theatre-name{
+      font-size: 1.8rem;
+    }
 
     .app-input {
       margin-top: 1.3rem;

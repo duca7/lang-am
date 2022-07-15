@@ -66,7 +66,7 @@ function toBooking () {
   width: 100%;
   display: flex;
   align-items: flex-end;
-  padding: 0 1rem 2rem;
+  padding: 0 1rem;
 
   &__caption {
     display: grid;

@@ -11,9 +11,7 @@
     <div class="booking-bill__section">
       <div class="booking-bill__transaction">
         <strong>Thời gian thanh Toán</strong>
-        <strong>Mã đơn</strong>
         <span class="font-msr">15:40 - 08/08 /2022</span>
-        <span>qKHS4nq54t2Ac...</span>
       </div>
     </div>
     <slot />
@@ -76,12 +74,12 @@
   }
 
   &__transaction {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 1rem;
-    row-gap: 0.4rem;
-    margin-top: 2rem;
-    text-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 1rem;
 
     strong {
       font-weight: 600;
@@ -89,6 +87,7 @@
 
     span {
       font-size: 0.9em;
+      padding-top: 0.5rem;
     }
   }
 
