@@ -28,7 +28,7 @@
 .app-title{
   padding: 1rem;
   .desc{
-    padding-top: 1rem;
+    padding-top: 1.5rem;
     font-size: 1.25rem;
     font-weight: 300;
     line-height: 140%;

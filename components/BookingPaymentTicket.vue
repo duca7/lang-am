@@ -4,7 +4,7 @@
       <div class="booking-bill__receipt">
         <h2>{{ show.displayName }}</h2>
         <p class="booking-bill__receipt-time">
-          {{ show.time }} <span>|</span>{{ show.category }}
+          {{ show.time }} <span>|</span> Đời thường
         </p>
         <p class="booking-bill__receipt-desc">
           Nhà Hát Rồng Vàng

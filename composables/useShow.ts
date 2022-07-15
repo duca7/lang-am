@@ -33,7 +33,7 @@ export const useShows = () => {
 
 const shows: Record<string, Show> = {
   'cau-ca': {
-    category: 'Đời thường',
+    category: 'doi-thuong',
     displayName: 'Câu cá',
     slug: 'cau-ca',
     displayImage: '/images/trotich/cau-ca.png',
@@ -43,7 +43,7 @@ const shows: Record<string, Show> = {
 
   },
   'bat-vit': {
-    category: 'Đời thường',
+    category: 'doi-thuong',
     slug: 'bat-vit',
     displayName: 'Bắt vịt',
     displayImage: '/images/trotich/bat-vit.png',
@@ -53,7 +53,7 @@ const shows: Record<string, Show> = {
 
   },
   'trong-lua': {
-    category: 'Đời thường',
+    category: 'doi-thuong',
     slug: 'trong-lua',
     displayName: 'Trồng lúa',
     displayImage: '/images/trotich/trong-lua.png',
@@ -63,7 +63,7 @@ const shows: Record<string, Show> = {
 
   },
   'bat-tien': {
-    category: 'Lễ hội',
+    category: 'le-hoi',
     slug: 'bat-tien',
     displayName: 'Bát tiên',
     displayImage: '/images/trotich/bat-tien.png',
@@ -73,7 +73,7 @@ const shows: Record<string, Show> = {
 
   },
   'mua-rong': {
-    category: 'Lễ hội',
+    category: 'le-hoi',
     slug: 'mua-rong',
     displayName: 'Múa rồng',
     displayImage: '/images/trotich/mua-rong.png',
@@ -83,7 +83,7 @@ const shows: Record<string, Show> = {
 
   },
   'mua-lan': {
-    category: 'Lễ hội',
+    category: 'le-hoi',
     slug: 'mua-lan',
     displayName: 'Múa lân',
     displayImage: '/images/trotich/mua-lan.png',
@@ -93,7 +93,7 @@ const shows: Record<string, Show> = {
 
   },
   'tra-guom': {
-    category: 'Tích cổ',
+    category: 'tich-co',
     slug: 'tra-guom',
     displayName: 'Trả gươm',
     displayImage: '/images/trotich/tra-guom.png',
@@ -103,7 +103,7 @@ const shows: Record<string, Show> = {
 
   },
   'thach-sanh': {
-    category: 'Tích cổ',
+    category: 'tich-co',
     slug: 'thach-sanh',
     displayName: 'Thạch sanh',
     displayImage: '/images/trotich/thach-sanh.png',
@@ -113,7 +113,7 @@ const shows: Record<string, Show> = {
 
   },
   'tam-cam': {
-    category: 'Tích cổ',
+    category: 'tich-co',
     slug: 'tam-cam',
     displayName: 'Tấm cám',
     displayImage: '/images/trotich/tam-cam.png',
@@ -124,7 +124,7 @@ const shows: Record<string, Show> = {
 };
 
 const showsNameMap = {
-  'Đời thường': 'Đời thường',
-  'Lễ hội': 'Lễ Hội',
-  'Tích cổ': 'Tích cổ'
+  'doi-thuong': 'Đời thường',
+  'le-hoi': 'Lễ Hội',
+  'tich-co': 'Tích cổ'
 };
