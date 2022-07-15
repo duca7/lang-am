@@ -4,7 +4,7 @@
       <p class="title">
         Thành lập
       </p>
-      <img src="/images/thanh-lap.png" alt="thanh-lap" width="100%">
+      <img src="/images/thanh-lap.png" alt="thanh-lap">
       <p class="content">
         Nuôi hoài bão xây dựng một nhà hát múa rối nước hiện đại tại TPHCM, Công ty TNHH Sân khấu Nghệ thuật Thái Dương TPHCM và Cung Văn hóa Lao động đã chính thức khởi công xây dựng và đưa Nhà hát Múa rối nước Rồng Vàng vào hoạt động từ tháng 8 2007.
       </p>
@@ -13,7 +13,7 @@
       <p class="title">
         Quy mô
       </p>
-      <img src="/images/quy-mo.png" alt="quy-mo" width="100%">
+      <img src="/images/quy-mo.png" alt="quy-mo">
       <div v-for="scale in scales" :key="scale.id" class="description">
         <div class="number">
           <span class="jamb" />
@@ -101,9 +101,15 @@ section{
     article{
       width: 100%;
     }
-    .title{
+    img{
+      width: 100%;
+      height: auto;
+      aspect-ratio: auto;
+    }
+     .title{
         font-size: 1.5rem;
         padding: 1rem 1rem;
+        font-weight: 500;
     }
     .content{
         font-size: 1rem;
