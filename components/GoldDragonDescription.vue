@@ -83,7 +83,7 @@ export default {
       },
       {
         number: '200',
-        infoBold: 'Hơn 200 ghế ngồi khang trang cho khán giả.',
+        infoBold: 'Hơn 200 ghế ngồi cho khán giả.',
         info: 'Khán phòng cũ được cân lại nền, bố trí lại 200 ghế ngồi khang trang; sàn diễn gỗ được sửa thành một hồ nước sâu 1,2m với thiết kế, cảnh trí... theo đúng môtip sân khấu thủy đình của loại hình rối nước. Sảnh trước nhà hát cũng được cải tạo thành kiến trúc mang đậm nét dân gian Việt.'
       }
     ]);

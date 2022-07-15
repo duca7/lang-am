@@ -1,6 +1,7 @@
 <template>
   <div class="container">
-    <img class="background-img" src="/images/muc-dong.jpg">
+    <!-- <img class="background-img" src="/images/muc-dong.jpg"> -->
+    <AppVideo video="/video/muc-dong.mp4" />
     <div class="page">
       <main class="article">
         <AppTitle :level="1" title="Trò tích" />
