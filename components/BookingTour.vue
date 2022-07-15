@@ -2,7 +2,7 @@
   <section>
     <AppTitle :level="3" title="Book tour" />
     <article>
-      <img src="/images/tour-sg-1.png" alt="tour-sg-1" width="100%">
+      <img src="/images/tour-sg-1.png" alt="tour-sg-1" class="tour-img">
       <div class="tour-title">
         <h3>Di sản trăm năm</h3>
         <AppBookLotusRed class="lotus-left" />
@@ -16,7 +16,7 @@
       </AppButtonRed>
     </article>
     <article>
-      <img src="/images/tour-sg-2.png" alt="tour-sg-2" width="100%">
+      <img src="/images/tour-sg-2.png" alt="tour-sg-2" class="tour-img">
       <div class="tour-title title-right">
         <AppBookLotusRedReverse class="lotus-right" />
         <h3>Nét đẹp muôn thuở</h3>
@@ -30,7 +30,7 @@
       </AppButtonRed>
     </article>
     <article>
-      <img src="/images/tour-sg-3.png" alt="tour-sg-3" width="100%">
+      <img src="/images/tour-sg-3.png" alt="tour-sg-3" class="tour-img">
       <div class="tour-title">
         <h3>Rong ca chiều thứ 7</h3>
         <AppBookLotusRed class="lotus-left" />
@@ -44,7 +44,7 @@
       </AppButtonRed>
     </article>
     <article>
-      <img src="/images/tour-sg-4.png" alt="tour-sg-4" width="100%">
+      <img src="/images/tour-sg-4.png" alt="tour-sg-4" class="tour-img">
       <div class="tour-title title-right">
         <AppBookLotusRedReverse class="lotus-right" />
         <h3>Dấu chân biệt động</h3>
@@ -111,7 +111,7 @@ section{
         }
     }
 
-    img{
+    .tour-img{
       width: 100%;
       height: auto;
       aspect-ratio: 0;

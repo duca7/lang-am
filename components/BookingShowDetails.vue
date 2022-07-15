@@ -1,44 +1,48 @@
 <template>
   <section>
-    <AppTitle :level="1" title="Đời thường" />
-    <div class="info-show">
-      <div class="info-show_date">
-        <AppCalendar />
-        <p>10 - tháng 8 - 2022</p>
-      </div>
-      <p class="info-show_desc">
-        Những họat động hằng ngày của người dân Việt xưa được các trò tích tái hiện lại chân thật trên sân khấu Rồng Vàng.
-      </p>
-      <div class="price">
-        <p>100.000 vnđ <span> | </span> <span>Chỉ còn một số vé cuối</span></p>
-      </div>
-
-      <AppButtonRed size="medium">
-        <AppCartIcon />
-        <span>Mua vé</span>
-      </AppButtonRed>
-    </div>
-
     <div class="card">
       <h1 class="card-number">
-        01
+        {{ number }}
       </h1>
-      <img src="/images/teu-giao.png" alt="" width="100%">
+      <img :src="background" alt="background-card" class="bg-show">
 
-      <AppTitle :level="3" title="Tễu gião" />
+      <AppTitle :level="3" :title="card" />
       <p class="card-desc">
-        “Tễu” nghĩa là “tiếng cười” theo tiếng Nôm. Chú Tễu là đại diện cho hình ảnh anh nông dân thông minh, hóm hỉnh, ứng đối trong các lễ hội của làng quê Việt xưa. Trước mỗi một chương trình trình diễn rối nước, anh Tễu sẽ là nhân vật dẫn chuyện và đem lại không khí vui tươi, nhộn nhịp để bắt đầu buổi trình diễn.
+        {{ content }}
       </p>
     </div>
   </section>
 </template>
 
+<script>
+export default {
+  props: {
+    number: {
+      type: String,
+      default: 'default'
+    },
+    background: {
+      type: String,
+      default: 'default'
+    },
+    card: {
+      type: String,
+      default: 'default'
+    },
+    content: {
+      type: String,
+      default: 'default'
+    }
+  }
+};
+</script>
+
 <style lang="scss" scoped>
   section{
     width: 100%;
-
+    padding-bottom: 2rem;
     .title{
-      padding: 1rem;
+      padding: 2rem 1rem 1rem 1rem;
     }
 
     .info-show{
@@ -75,7 +79,7 @@
     }
 
     .card{
-        padding-top: 1rem;
+        padding-top: 5rem;
         position: relative;
         .card-number{
             font-size: 100px;
@@ -84,9 +88,11 @@
             padding-left: 1rem;
             color: $primary-dark-red-900;
             font-size: 8rem;
-            -webkit-text-fill-color: #000; /* Will override color (regardless of order) */
+            -webkit-text-fill-color: transparent;
             -webkit-text-stroke-width: 2px;
             -webkit-text-stroke-color: $primary-dark-red-900;
+            position: absolute;
+            top:2%
         }
 
         .card-desc{
@@ -97,7 +103,7 @@
         }
     }
 
-    img{
+    .bg-show{
         width: 100%;
         height: auto;
         aspect-ratio: auto;
