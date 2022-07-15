@@ -11,7 +11,7 @@
             :key="item"
             :class="`${item.size || ''} souvenir-puppet__item`"
             :item="item"
-            @add="goToInfo(item.slug)"
+            @add="goToInfo(item)"
           />
         </div>
         <div class="souvenir-puppet__col">
@@ -20,7 +20,7 @@
             :key="item"
             :class="`${item.size || ''} souvenir-puppet__item`"
             :item="item"
-            @add="goToInfo(item.slug)"
+            @add="goToInfo(item)"
           />
         </div>
       </div>
@@ -35,7 +35,7 @@
             :key="item"
             :class="`${item.size || ''} souvenir-puppet__item`"
             :item="item"
-            @add="goToInfo(item.slug)"
+            @add="goToInfo(item)"
           />
         </div>
         <div class="souvenir-puppet__col">
@@ -44,7 +44,7 @@
             :key="item"
             :class="`${item.size || ''} souvenir-puppet__item`"
             :item="item"
-            @add="goToInfo(item.slug)"
+            @add="goToInfo(item)"
           />
         </div>
       </div>
@@ -54,6 +54,7 @@
 
 <script setup>
 const { findByCategory } = useSouvenir();
+
 const router = useRouter();
 
 const _souvenirs = findByCategory('souvenir');
@@ -62,8 +63,8 @@ const _gifts = findByCategory('gift');
 const souvenirs = [_souvenirs.slice(0, 3), _souvenirs.slice(3, 6)];
 const gifts = [_gifts.slice(0, 4), _gifts.slice(4, 8)];
 
-function goToInfo (slug) {
-  router.push(`/luu-niem/${slug}`);
+function goToInfo (item) {
+  router.push(`/luu-niem/${item.slug}`);
 }
 </script>
 

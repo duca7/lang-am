@@ -1,12 +1,4 @@
-type Souvenir = {
-  name: string;
-  price: number;
-  url: string;
-  category: 'souvenir' | 'gift';
-  bgc: string;
-  slug: string;
-  size?: string;
-};
+import { Souvenir } from './type';
 
 export const useSouvenir = () => {
   function findBySlug (slug: string) {

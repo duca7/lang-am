@@ -1,17 +1,16 @@
 <template>
   <div class="app-modal">
-    <div class="overlay" @click="closeModal()" />
+    <div class="backdrop" @click="closeModal()" />
     <slot />
   </div>
 </template>
 
 <script setup>
-const emits = defineEmits(['overlayclick']);
+const emits = defineEmits(['onbackdropclick']);
 
 function closeModal () {
-  emits('closemodal');
+  emits('onbackdropclick');
 }
-
 </script>
 
 <style lang="scss" scoped>
@@ -22,17 +21,18 @@ function closeModal () {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 3;
 
-  .overlay {
+  .backdrop {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background: #000;
-    opacity: 0.2;
+    opacity: 0.8;
     z-index: -1;
   }
 }

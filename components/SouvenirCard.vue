@@ -7,7 +7,7 @@
     >
     <span class="souvenir-card__name">{{ props.item.name }}</span>
     <span class="souvenir-card__price">{{ price }}</span>
-    <AppAddIcon class="souvenir-card__add-icon" @click="$emit('add')" />
+    <AppAddIcon class="souvenir-card__add-icon" @click="$emit('add',item)" />
   </div>
 </template>
 
