@@ -87,8 +87,10 @@ function goToCreditCardInfo () {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .booking-extra {
+  --space-md: 2rem;
+
   &__section {
     padding: 0 1rem;
 
@@ -101,6 +103,23 @@ function goToCreditCardInfo () {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-family: "MTD Valky Bold";
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid $primary-dark-red-300;
+    font-weight: 400;
+
+    &-quantity {
+      display: flex;
+      align-items: center;
+
+      span {
+        margin-top: 0.3rem;
+        width: var(--space-md);
+        text-align: center;
+      }
+    }
 
     &-time {
       display: flex;
@@ -138,7 +157,8 @@ function goToCreditCardInfo () {
     display: grid;
     grid-template-columns: 7fr 5fr;
     column-gap: 2rem;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
+
     .app-input {
       &:first-child {
         font-size: 1.5rem;
