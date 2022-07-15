@@ -6,7 +6,9 @@
       <div class="description">
         <p>Từ nghệ thuật dân gian, Rối Nước trở thành truyền thống, sáng tạo của người Việt.</p>
         <div>
-          <AppButtonNavigation />
+          <NuxtLink to="/roi-nuoc">
+            <AppButtonNavigation />
+          </NuxtLink>
         </div>
       </div>
     </article>
