@@ -86,9 +86,8 @@ export default {
 
         p {
             flex: 7;
-            font-size: 1rem;
+            font-size: 1.125rem;
             font-weight: 300;
-            text-align: justify;
             line-height: 140%;
             margin-right: 1rem;
         }

@@ -21,7 +21,7 @@ const souvenirs: Record<string, Souvenir> = {
   'chu-teu': {
     name: 'Chú Tễu',
     price: 320,
-    url: '/images/souvenir/chu-teu.png',
+    url: '/images/souvenir/chu-teu.jpg',
     category: 'souvenir',
     slug: 'chu-teu',
     bgc: '#0d0d0d'
