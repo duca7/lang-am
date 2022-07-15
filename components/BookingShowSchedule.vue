@@ -10,9 +10,12 @@
       <div class="calendar">
         <div v-for="august in showAugust" :key="august.day">
           <div>
-            <p class="day">
-              {{ august.day }}
-            </p>
+            <NuxtLink to="/booking/doi-thuong" class="router">
+              <p class="day">
+                {{ august.day }}
+              </p>
+            </NuxtLink>
+
             <p class="content">
               <span>{{ august.contentBold }}</span> <br>
               {{ august.content }}
@@ -33,9 +36,12 @@
       <div class="calendar">
         <div v-for="september in showSeptember" :key="september.day">
           <div>
-            <p class="day">
-              {{ september.day }}
-            </p>
+            <NuxtLink to="/booking/le-hoi" class="router">
+              <p class="day">
+                {{ september.day }}
+              </p>
+            </NuxtLink>
+
             <p class="content">
               <span>{{ september.contentBold }}</span> <br>
               {{ september.content }}
@@ -57,9 +63,12 @@
       <div class="calendar">
         <div v-for="october in showOctober" :key="october.day">
           <div>
-            <p class="day">
-              {{ october.day }}
-            </p>
+            <NuxtLink to="/booking/doi-thuong" class="router">
+              <p class="day">
+                {{ october.day }}
+              </p>
+            </NuxtLink>
+
             <p class="content">
               <span>{{ october.contentBold }}</span> <br>
               {{ october.content }}
@@ -172,6 +181,11 @@ const showOctober = [
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 10px;
+
+      .router{
+        text-decoration: none;
+        color: #fff;
+      }
       .day{
         font-size: 1.875rem;
         font-family: 'MTD Valky Bold';

@@ -6,6 +6,7 @@
     <BookingPurchaseForms />
     <BookingReturnTicket />
     <BookingShowLife />
+    <BookingShowFestival />
   </section>
 </template>
 

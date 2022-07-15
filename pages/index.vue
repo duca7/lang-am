@@ -1,6 +1,18 @@
 <template>
   <main class="home">
-    <div class="main-image" />
+    <!-- <div class="main-image" /> -->
+    <video
+      class="main-image"
+      autoplay
+      muted
+      loop
+    >
+      <source
+        src="/video/chu-teu.mp4"
+        type="video/mp4"
+      >
+
+    </video>
     <article>
       <h1>Góc nhìn mới theo dòng chảy văn hóa mới.</h1>
       <div class="description">
@@ -22,11 +34,8 @@ export default {};
 <style lang="scss">
 .home {
     .main-image {
-        background-size: cover;
-        background-repeat: no-repeat;
         height: 65vh;
         width: 100%;
-        background-image: url('/images/chu-teu.jpeg');
     }
 
     article {
