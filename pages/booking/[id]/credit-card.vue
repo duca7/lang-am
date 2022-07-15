@@ -59,20 +59,36 @@
         </button>
       </div>
     </div>
-    <BookingPaymentModal :is-modal-open="isModalOpen" />
+    <BookingPaymentModal v-if="visible">
+      <component :is="ModalSlot" />
+    </BookingPaymentModal>
   </div>
 </template>
 
 <script setup>
-const isModalOpen = ref(false);
+const { selectedSouvenir } = useSouvenirCart();
+const { findBySlug } = useShows();
+const route = useRoute();
+
+let data = findBySlug(route.params.id);
+let component = 'BookingPaymentTicket';
+
+if (!data) {
+  data = selectedSouvenir.value;
+  component = 'BookingPaymentSouvenir';
+}
+
+const ModalSlot = resolveComponent(component);
+
+const visible = ref(false);
 
 function completeTransaction () {
-  isModalOpen.value = true;
+  visible.value = true;
 }
 
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .booking-credit {
   position: relative;
 
