@@ -5,6 +5,7 @@
     <BookingTour />
     <BookingPurchaseForms />
     <BookingReturnTicket />
+    <BookingShowDetails />
   </section>
 </template>
 

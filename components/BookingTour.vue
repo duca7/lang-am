@@ -110,5 +110,11 @@ section{
             float: right;
         }
     }
+
+    img{
+      width: 100%;
+      height: auto;
+      aspect-ratio: 0;
+    }
 }
 </style>

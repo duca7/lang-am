@@ -3,8 +3,16 @@ import eslintPlugin from 'vite-plugin-eslint';
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  head: {
-    meta: [{ name: 'viewport', content: 'user-scalable=no, width=device-width, initial-scale=1' }]
+
+  app: {
+    head: {
+      title: 'Lãng Âm',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' }
+      ],
+      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }]
+    }
   },
   css: ['@/assets/scss/main.scss'],
 
