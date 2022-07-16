@@ -42,51 +42,51 @@ const shows: Record<string, Show> = {
     time: '12 phút'
 
   },
+  'mo-cua': {
+    category: 'doi-thuong',
+    slug: 'mo-cua',
+    displayName: 'Mò cua',
+    displayImage: '/images/mo-cua.jpg',
+    date: 'Thứ 2 và thứ 4',
+    rate: 8.5,
+    time: '12 phút'
+
+  },
+  'teu-giao': {
+    category: 'doi-thuong',
+    slug: 'teu-giao',
+    displayName: 'Tễu Gião',
+    displayImage: '/images/chu-teu-giao.jpg',
+    date: 'Thứ 2 và thứ 4',
+    rate: 8.5,
+    time: '12 phút'
+
+  },
+  'di-cay': {
+    category: 'doi-thuong',
+    displayName: 'Đi cày',
+    slug: 'di-cay',
+    displayImage: '/images/di-cay.jpg',
+    date: 'Thứ 2 và thứ 4',
+    rate: 8.5,
+    time: '12 phút'
+
+  },
+  'thoi-lua': {
+    category: 'doi-thuong',
+    slug: 'thoi-lua',
+    displayName: 'Thổi lửa',
+    displayImage: '/images/thoi-lua.jpg',
+    date: 'Thứ 2 và thứ 4',
+    rate: 8.5,
+    time: '12 phút'
+
+  },
   'bat-vit': {
     category: 'doi-thuong',
     slug: 'bat-vit',
     displayName: 'Bắt vịt',
-    displayImage: '/images/trotich/bat-vit.png',
-    date: 'Thứ 2 và thứ 4',
-    rate: 8.5,
-    time: '12 phút'
-
-  },
-  'trong-lua': {
-    category: 'doi-thuong',
-    slug: 'trong-lua',
-    displayName: 'Trồng lúa',
-    displayImage: '/images/trotich/trong-lua.png',
-    date: 'Thứ 2 và thứ 4',
-    rate: 8.5,
-    time: '12 phút'
-
-  },
-  'cau-ca-1': {
-    category: 'doi-thuong',
-    displayName: 'Câu cá',
-    slug: 'cau-ca',
-    displayImage: '/images/trotich/cau-ca.png',
-    date: 'Thứ 2 và thứ 4',
-    rate: 8.5,
-    time: '12 phút'
-
-  },
-  'bat-vit-1': {
-    category: 'doi-thuong',
-    slug: 'bat-vit',
-    displayName: 'Bắt vịt',
-    displayImage: '/images/trotich/bat-vit.png',
-    date: 'Thứ 2 và thứ 4',
-    rate: 8.5,
-    time: '12 phút'
-
-  },
-  'trong-lua-1': {
-    category: 'doi-thuong',
-    slug: 'trong-lua',
-    displayName: 'Trồng lúa',
-    displayImage: '/images/trotich/trong-lua.png',
+    displayImage: '/images/tro-ech.png',
     date: 'Thứ 2 và thứ 4',
     rate: 8.5,
     time: '12 phút'
@@ -96,7 +96,7 @@ const shows: Record<string, Show> = {
     category: 'le-hoi',
     slug: 'bat-tien',
     displayName: 'Bát tiên',
-    displayImage: '/images/trotich/bat-tien.png',
+    displayImage: '/images/bat-tien-2.jpg',
     date: 'Thứ 2 và thứ 4',
     rate: 8.5,
     time: '12 phút'
@@ -106,7 +106,7 @@ const shows: Record<string, Show> = {
     category: 'le-hoi',
     slug: 'mua-rong',
     displayName: 'Múa rồng',
-    displayImage: '/images/trotich/mua-rong.png',
+    displayImage: '/images/mua-rong.jpg',
     date: 'Thứ 2 và thứ 4',
     rate: 8.5,
     time: '12 phút'
@@ -116,37 +116,37 @@ const shows: Record<string, Show> = {
     category: 'le-hoi',
     slug: 'mua-lan',
     displayName: 'Múa lân',
-    displayImage: '/images/trotich/mua-lan.png',
+    displayImage: '/images/mua-lan.jpg',
     date: 'Thứ 2 và thứ 4',
     rate: 8.5,
     time: '12 phút'
 
   },
-  'bat-tien-1': {
+  'dua-thuyen': {
     category: 'le-hoi',
-    slug: 'bat-tien',
-    displayName: 'Bát tiên',
-    displayImage: '/images/trotich/bat-tien.png',
+    slug: 'dua-thuyen',
+    displayName: 'Đua thuyền',
+    displayImage: '/images/dua-thuyen.webp',
     date: 'Thứ 2 và thứ 4',
     rate: 8.5,
     time: '12 phút'
 
   },
-  'mua-rong-1': {
+  'dang-hoa': {
     category: 'le-hoi',
-    slug: 'mua-rong',
-    displayName: 'Múa rồng',
-    displayImage: '/images/trotich/mua-rong.png',
+    slug: 'dang-hoa',
+    displayName: 'Dâng hoa',
+    displayImage: '/images/dang-hoa.jpg',
     date: 'Thứ 2 và thứ 4',
     rate: 8.5,
     time: '12 phút'
 
   },
-  'mua-lan-1': {
+  'ruoc-kieu': {
     category: 'le-hoi',
-    slug: 'mua-lan',
-    displayName: 'Múa lân',
-    displayImage: '/images/trotich/mua-lan.png',
+    slug: 'ruoc-kieu',
+    displayName: 'Rước kiệu',
+    displayImage: '/images/ruoc-kieu.jpg',
     date: 'Thứ 2 và thứ 4',
     rate: 8.5,
     time: '12 phút'
@@ -156,7 +156,7 @@ const shows: Record<string, Show> = {
     category: 'tich-co',
     slug: 'tra-guom',
     displayName: 'Trả gươm',
-    displayImage: '/images/trotich/tra-guom.png',
+    displayImage: '/images/ho-guom.jpg',
     date: 'Thứ 2 và thứ 4',
     rate: 8.5,
     time: '12 phút'
@@ -166,7 +166,7 @@ const shows: Record<string, Show> = {
     category: 'tich-co',
     slug: 'thach-sanh',
     displayName: 'Thạch sanh',
-    displayImage: '/images/trotich/thach-sanh.png',
+    displayImage: '/images/thach-sanh.jpg',
     date: 'Thứ 2 và thứ 4',
     rate: 8.5,
     time: '12 phút'
@@ -176,36 +176,36 @@ const shows: Record<string, Show> = {
     category: 'tich-co',
     slug: 'tam-cam',
     displayName: 'Tấm cám',
-    displayImage: '/images/trotich/tam-cam.png',
+    displayImage: '/images/tam-cam.jpg',
     date: 'Thứ 2 và thứ 4',
     rate: 8.5,
     time: '12 phút'
   },
-  'tra-guom-1': {
+  'ruoc-kieu-1': {
     category: 'tich-co',
-    slug: 'tra-guom',
-    displayName: 'Trả gươm',
-    displayImage: '/images/trotich/tra-guom.png',
-    date: 'Thứ 2 và thứ 4',
-    rate: 8.5,
-    time: '12 phút'
-
-  },
-  'thach-sanh-1': {
-    category: 'tich-co',
-    slug: 'thach-sanh',
-    displayName: 'Thạch sanh',
-    displayImage: '/images/trotich/thach-sanh.png',
+    slug: 'ruoc-kieu',
+    displayName: 'Rước kiệu',
+    displayImage: '/images/water-puppet-show-hanoi-bonecos.jpg',
     date: 'Thứ 2 và thứ 4',
     rate: 8.5,
     time: '12 phút'
 
   },
-  'tam-cam-1': {
+  'trang-nguyen': {
     category: 'tich-co',
-    slug: 'tam-cam',
-    displayName: 'Tấm cám',
-    displayImage: '/images/trotich/tam-cam.png',
+    slug: 'trang-nguyen',
+    displayName: 'Trạng nguyên',
+    displayImage: '/images/trang-nguyen.jpg',
+    date: 'Thứ 2 và thứ 4',
+    rate: 8.5,
+    time: '12 phút'
+
+  },
+  'mua-quạt': {
+    category: 'tich-co',
+    slug: 'mua-quạt',
+    displayName: 'Múa quạt',
+    displayImage: '/images/mua-quat.jpg',
     date: 'Thứ 2 và thứ 4',
     rate: 8.5,
     time: '12 phút'

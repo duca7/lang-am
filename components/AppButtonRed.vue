@@ -30,8 +30,8 @@ export default {
   justify-content: center;
 
   span{
-    font-weight: 500;
-    font-size: 1.1em;
+    font-weight: 600;
+    font-size: 1rem;
     margin:0 5px;
   }
 

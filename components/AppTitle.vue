@@ -34,10 +34,7 @@ export default {
   display: flex;
 
   h1 {
-    font-size: 3.5rem;
-    &+.underline {
-      transform: scale(1.3);
-    }
+    font-size: 3.75rem;
   }
 
   h2 {
