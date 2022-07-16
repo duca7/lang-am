@@ -38,7 +38,6 @@
 <script setup>
 const wards = [
   { value: '', text: 'Xã/Phường' },
-
   { value: '', text: 'Phường Bến Thành' },
   { value: '', text: 'Phường Đa Kao' },
   { value: '', text: 'Phường Bến Nghé' },

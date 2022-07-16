@@ -1,7 +1,6 @@
 <template>
   <main class="home">
-    <div class="main-image" />
-
+    <AppVideo video="/video/chu-teu.mp4" />
     <article>
       <h1>Góc nhìn mới theo dòng chảy văn hóa mới.</h1>
       <div class="description">
