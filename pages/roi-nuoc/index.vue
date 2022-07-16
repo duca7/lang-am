@@ -22,7 +22,7 @@
     </WaterPuppetArticle>
     <div>
       <AppButtonRed class="btn-bottom feedback">
-        <img src="/icons/gio.svg" alt="cai-gio-bat-ca">
+        <img src="/icons/gio.svg" alt="cai-gio-bat-ca" class="cai-gio">
         Đặt vé
       </AppButtonRed>
     </div>
@@ -67,9 +67,11 @@
     border: none;
     font-size: 1.25rem;
     font-weight: 400;
-    img {
-      padding-right: 1rem;
-    }
+    .cai-gio {
+      margin-right: 0.5rem;
+      width: 17px;
+      height: 21px;
+}
   }
   .overlay {
     @include overlay("/images/la-sen-lon.png");

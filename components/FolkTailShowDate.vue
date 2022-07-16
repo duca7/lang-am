@@ -1,19 +1,25 @@
 <template>
-  <div class="ticket-info__date">
-    <div
-      v-for="date in ticketDate"
-      :key="date.strDay"
-      class="ticket-info__date-item"
-      @click="activate"
-    >
-      <p class="ticket-info__date-item--string">
-        {{ date.strDay }}
-      </p>
-      <p class="ticket-info__date-item--number">
-        {{ date.numberDay }}
-      </p>
+  <div>
+    <div class="ticket-info__date">
+      <div
+        v-for="date in ticketDate"
+        :key="date.strDay"
+        class="ticket-info__date-item"
+        @click="activate"
+      >
+        <p class="ticket-info__date-item--string">
+          {{ date.strDay }}
+        </p>
+        <p class="ticket-info__date-item--number">
+          {{ date.numberDay }}
+        </p>
+      </div>
+      <div ref="underline" class="underline" />
     </div>
-    <div ref="underline" class="underline" />
+    <div class="btn-red">
+      <img src="/images/icon-arrow-red.png" alt="" class="red-arrow">
+      <img src="/images/arrow-red-1.png" alt="" class="red-arrow">
+    </div>
   </div>
 </template>
 
@@ -86,6 +92,18 @@ function activate (event) {
       transform-origin: 0% 0%;
       transition: transform 0.3s;
     }
+  }
+}
+
+.btn-red{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .red-arrow{
+    width: 20px;
+    height: 20px;
+    padding-top: 0.635rem;
   }
 }
 </style>

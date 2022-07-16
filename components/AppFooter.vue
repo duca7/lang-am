@@ -46,7 +46,6 @@ footer {
   display: flex;
   align-items: center;
   width: 100%;
-  position: relative;
   padding: 1rem 1rem 2rem 1em;
   background-color: $primary-dark-red-200;
 
@@ -70,7 +69,7 @@ footer {
 
   .about {
     padding-left: 1em;
-
+    margin-bottom: 3rem;
     .contact {
       display: flex;
       justify-content: space-between;

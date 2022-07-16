@@ -1,38 +1,45 @@
 <template>
-  <div class="container">
-    <main class="show-info">
-      <div class="show-info__caption">
-        <h2>
-          {{ show.displayName }}
-        </h2>
-        <span class="show-info__rate font-mtd">{{ show.rate }}<AppStartIcon /></span>
-        <p class="show-info__time">
-          {{ show.time }} <span>|</span>{{ category }}
-        </p>
-      </div>
-    </main>
-    <section class="ticket-info" :style="`--padding:${padding}px`">
-      <p class="ticket-info__title">
-        Thông tin vé
-      </p>
-      <FolkTailShowDate :padding="padding" />
-      <div class="ticket-info__price">
-        <button
-          v-for="ticket in ticketPrices"
-          :key="ticket.id"
-          class="ticket-info__price-button font-mtd"
-          :class="{ active: clickedButton === ticket.id }"
-          @click="clickButton(ticket.id)"
-        >
-          <p>{{ ticket.time }}</p>
-          <span>{{ ticket.price }}</span>
-        </button>
-      </div>
-      <AppButtonRed size="large" class="ticket-info__continue" @click="toBooking">
-        <span>Tiếp tục</span>
-        <AppArrowIcon />
-      </AppButtonRed>
-    </section>
+  <div>
+    <div class="container">
+      <main class="show-info">
+        <div class="show-info__caption">
+          <h2>
+            {{ show.displayName }}
+          </h2>
+          <span class="show-info__rate font-mtd">{{ show.rate }}<AppStartIconBig /> </span>
+          <p class="show-info__time">
+            {{ show.time }} <span>|</span>{{ category }}
+          </p>
+        </div>
+      </main>
+      <section>
+        <div class="ticket-info" :style="`--padding:${padding}px`">
+          <p class="ticket-info__title">
+            Thông tin vé
+          </p>
+          <FolkTailShowDate :padding="padding" />
+          <div class="ticket-info__price">
+            <button
+              v-for="ticket in ticketPrices"
+              :key="ticket.id"
+              class="ticket-info__price-button font-mtd"
+              :class="{ active: clickedButton === ticket.id }"
+              @click="clickButton(ticket.id)"
+            >
+              <p>{{ ticket.time }}</p>
+              <span>{{ ticket.price }}</span>
+            </button>
+          </div>
+          <AppButtonRed class="ticket-info__continue" @click="toBooking">
+            <span>Tiếp tục</span>
+            <AppArrowIcon />
+          </appbuttonred>
+        </div>
+        <AppFooter
+          style="position: absolute;top: 105%"
+        />
+      </section>
+    </div>
   </div>
 </template>
 <script setup>
@@ -60,22 +67,28 @@ function toBooking () {
 .show-info {
   background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(23, 1, 1, 0) 25%),
     url("/images/cau-ca-info.png") no-repeat;
-  background-position: top;
-  background-size: auto 85%;
-  height: 80vh;
-  width: 100%;
-  display: flex;
-  align-items: flex-end;
-  padding: 0 1rem;
+     background-position: top;
+    background-size: auto 80%;
+    display: flex;
+    height: 65vh;
+    padding: 0 1rem;
+    width: 100%;
+    position: relative;
 
   &__caption {
+    bottom: 25%;
     display: grid;
     flex: 1;
     grid-template-columns: 9fr 1fr;
+    position: absolute;
+    width: 94%;
+
   }
 
   &__rate {
     align-self: center;
+    font-size: 1.125rem;
+    font-weight: 700;
   }
 
   &__time {
@@ -88,17 +101,21 @@ function toBooking () {
 
 .ticket-info {
   padding: 0 var(--padding, 16px) 2rem;
+    position: absolute;
+    width: 100%;
+    top: 60%;
 
   &__title {
-    font-size: 1.4rem;
-    padding: 1.5rem 0;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    font-weight: 500;
   }
 
   &__price {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
 
     &-button {
       font-size: 0.8em;
@@ -106,7 +123,7 @@ function toBooking () {
       color: #fff;
       text-align: center;
       border: 1px solid $primary-dark-red-600;
-      padding: 0.4rem 0.5rem;
+      padding: 0.8rem 0.5rem;
       border-radius: 8px;
       transition: border-color 0.5s;
 
@@ -125,7 +142,9 @@ function toBooking () {
   }
 
   &__continue {
-    margin: 2rem auto 1rem;
+    margin: 2.5rem auto 1rem;
+    width: 184px;
+    height: 50px;
   }
 }
 </style>
