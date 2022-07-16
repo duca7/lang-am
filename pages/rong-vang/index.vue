@@ -1,9 +1,9 @@
 <template>
   <div class="container">
-    <AppTitle :level="1" title="Rồng Vàng">
+    <AppTitle :level="1" title="Rồng Vàng" />
+    <p class="gold-dragon-content">
       Nhà hát múa rối nước tư nhân đầu tiên của Việt Nam mang tên Rồng Vàng.
-    </AppTitle>
-
+    </p>
     <WaterPuppetArticle
       title="Nhà hát Rồng Vàng"
       description="Địa điểm biểu diễn múa rối nước dân gian Việt Nam duy nhất ở Tp. Hồ Chí Minh được diễn ra trên sân khấu nước."
@@ -25,15 +25,15 @@
 
 <style lang="scss" scoped>
 
-.app-title{
+.title{
   padding: 1rem;
-  .desc{
-    padding-top: 1.5rem;
+}
+
+.gold-dragon-content{
+    padding: 0.2rem 1rem 0 1rem;
     font-size: 1.25rem;
     font-weight: 500;
     line-height: 140%;
-
-  }
 }
   .btn-bottom {
     position: fixed;

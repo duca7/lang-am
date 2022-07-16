@@ -183,7 +183,7 @@ export default {
         font-weight: 200;
         line-height: 140%;
         padding-left: 3.5rem;
-        text-align: justify;
+
       }
     }
   }

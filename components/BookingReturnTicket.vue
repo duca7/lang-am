@@ -15,7 +15,7 @@
             padding: 0 1rem;
 
             .desc{
-                font-size: 1rem;
+                font-size: 1.125rem;
                 line-height: 140%;
                 font-weight: 400;
                 padding-top: 0.5rem;

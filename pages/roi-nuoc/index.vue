@@ -1,10 +1,10 @@
 <template>
   <main class="water-puppet container">
-    <AppTitle :level="1" title="Rối Nước">
-      Là một loại hình nghệ thuật sân khấu độc đáo, ra đời từ nền văn hóa lúa
+    <AppTitle :level="1" title="Rối Nước" />
+    <p class="water-puppet_content">
+      Một loại hình nghệ thuật sân khấu độc đáo, ra đời từ nền văn hóa lúa
       nước.
-    </AppTitle>
-
+    </p>
     <WaterPuppetArticle
       title="Giới Thiệu"
       description="Múa rối nước (còn gọi là trò rối nước) được coi là nét văn hóa phi vật thể dân gian đặc sắc của dân tộc Việt Nam."
@@ -33,16 +33,15 @@
 .water-puppet {
   width: 100%;
   position: relative;
-
-  .app-title{
-    padding: 1rem 1rem 0 1rem;
-
-    .desc{
+  &_content{
       font-size: 1.25rem;
       font-weight: 500;
       line-height: 140%;
-      padding-top: 0.625rem;
-    }
+      padding: 0.3rem 1rem 0 1rem;
+  }
+
+  .title{
+    padding: 0 1rem;
   }
 
   .btn-bottom {

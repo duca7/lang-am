@@ -4,7 +4,7 @@
       <h4>Nhà hát rồng vàng</h4>
       <span>Địa chỉ</span>
       <p class="font-msr">
-        55B Nguyễn Thị Minh Khai, Phường Bến Thành, Quận 1, TP. HCM
+        55B Nguyễn Thị Minh Khai, Bến Thành, Quận 1, TP. HCM
       </p>
       <span>Email</span>
       <p class="font-msr">
@@ -64,7 +64,8 @@ footer {
 
   p {
     padding-top: 0.3rem;
-    font-size: 0.8rem;
+    font-size: 0.875rem;
+    line-height: 140%;
   }
 
   .about {

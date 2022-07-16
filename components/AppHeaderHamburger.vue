@@ -19,7 +19,7 @@ const { isOpen, toggle } = useSidebar();
         margin: 3px 0;
 
         &.active {
-            background-color: #fff;
+            background-color: $primary-dark-red-100;
             margin-top: 0;
             margin-bottom: 0;
             transform: rotate() translateY(-3px);
@@ -43,7 +43,7 @@ const { isOpen, toggle } = useSidebar();
             margin-right: $mid-path-width - $outer-path-width;
 
             &.active {
-                background-color: #fff;
+                background-color: $primary-dark-red-100;
                 margin-top: 0;
                 margin-bottom: 0;
                 transform: rotate(45deg) translateY(-3px);
@@ -55,7 +55,7 @@ const { isOpen, toggle } = useSidebar();
             margin-left: $mid-path-width - $outer-path-width;
 
             &.active {
-                background-color: #fff;
+                background-color: $primary-dark-red-100;
                 margin-top: 0;
                 margin-bottom: 0;
                 transform: rotate(45deg) translateY(3px);
@@ -67,7 +67,7 @@ const { isOpen, toggle } = useSidebar();
             height: 3px;
 
             &.active {
-                background-color: #fff;
+                background-color: $primary-dark-red-100;
                 transform: rotate(-45deg) scaleY(0.6);
             }
         }

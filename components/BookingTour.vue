@@ -30,7 +30,7 @@
       </AppButtonRed>
     </article>
     <article>
-      <img src="/images/tour-sg-3.png" alt="tour-sg-3" class="tour-img">
+      <img src="/images/tour-sg-3.png" alt="tour-sg-3" class="tour-img" style="padding-top:1rem;">
       <div class="tour-title">
         <h3>Rong ca chiều thứ 7</h3>
         <AppBookLotusRed class="lotus-left" />

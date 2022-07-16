@@ -47,7 +47,8 @@ article{
     gap:0.5rem;
     padding-top: 1rem;
     .name{
-        font-size: 1.3rem;
+        font-size: 1.5rem;
+        font-weight: 500;
     }
 
     .last-name{

@@ -201,6 +201,7 @@ const showOctober = [
     }
     .overlay {
      @include overlay("/images/teu-booking-bg.png");
+     background-size: cover;
      top: 30%;
      opacity: 0.3;
     }
