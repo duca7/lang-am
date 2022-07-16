@@ -7,7 +7,7 @@
     <WaterPuppetArticle
       title="Nhà hát Rồng Vàng"
       description="Địa điểm biểu diễn múa rối nước dân gian Việt Nam duy nhất ở Tp. Hồ Chí Minh được diễn ra trên sân khấu nước."
-      background="/images/bat-tien-bg.png"
+      video="/video/bat-tien.mp4"
     >
       <GoldDragonDescription />
     </WaterPuppetArticle>

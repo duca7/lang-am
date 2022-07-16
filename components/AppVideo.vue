@@ -1,8 +1,14 @@
 <template>
   <video
+    id="myVideo"
     class="video"
-    autoplay
-    loop
+    autoplay="autoplay"
+    loop="loop"
+    muted
+    defaultMuted
+    playsinline
+    oncontextmenu="return false;"
+    preload="auto"
   >
     <source
       :src="video"
