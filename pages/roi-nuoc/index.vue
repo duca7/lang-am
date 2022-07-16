@@ -8,13 +8,13 @@
     <WaterPuppetArticle
       title="Giới Thiệu"
       description="Múa rối nước (còn gọi là trò rối nước) được coi là nét văn hóa phi vật thể dân gian đặc sắc của dân tộc Việt Nam."
-      background="/images/ngu-ong.png"
+      video="/video/ngu-ong.mp4"
     />
 
     <WaterPuppetArticle
       title="Biểu Diễn"
       description="Trong biểu diễn múa rối nước lời ca của nghệ sĩ và cách diễn rối của nghệ nhân quan trọng không kém. "
-      background="/images/ho-guom.png"
+      video="/video/tra-guom.mp4"
     >
       <WaterPuppetActivity />
     </WaterPuppetArticle>

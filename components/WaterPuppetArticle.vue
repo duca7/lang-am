@@ -4,7 +4,7 @@
       <AppTitle :level="3" :title="title" />
     </div>
     <div class="water-puppet_bg">
-      <img :src="background" alt="hinh-roi-nuoc">
+      <AppVideo :video="video" />
     </div>
     <div class="water-puppet_description">
       <p>{{ description }}</p>
@@ -30,7 +30,7 @@ export default {
       type: String,
       default: 'default'
     },
-    background: {
+    video: {
       type: String,
       default: 'default'
     }

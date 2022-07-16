@@ -1,8 +1,9 @@
 <template>
   <section>
-    <AppTitle :level="2" title="Hoàn vé">
+    <AppTitle :level="2" title="Hoàn vé" />
+    <p class="return-content">
       Việc hoàn trả sẽ được thực hiện bằng phương thức thanh toán bạn đã chọn.
-    </AppTitle>
+    </p>
     <img src="/images/booking-form.png" alt="booking-form" class="form">
   </section>
 </template>
@@ -11,15 +12,14 @@
     section{
         width: 100%;
         padding-bottom: 2rem;
-        .app-title{
+        .title{
             padding: 0 1rem;
-
-            .desc{
-                font-size: 1.125rem;
+        }
+        .return-content{
+          font-size: 1.125rem;
                 line-height: 140%;
                 font-weight: 400;
-                padding-top: 0.5rem;
-            }
+                padding: 0.5rem 1rem;
         }
 
         .form{
