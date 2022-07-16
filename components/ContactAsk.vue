@@ -22,9 +22,9 @@
       <input placeholder="Phone" type="text">
       <input placeholder="Câu hỏi" type="text">
       <div class="btn-form">
-        <img src="images/dinh-kem.png" alt="dinh-kem">
+        <img src="/images/dinh-kem.png" alt="dinh-kem">
         <button>
-          <img src="icons/icon-bird.svg" alt="icon-bird">
+          <img src="/icons/icon-bird.svg" alt="icon-bird">
           Gửi
         </button>
       </div>
