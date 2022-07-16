@@ -20,7 +20,7 @@
     </WaterPuppetArticle>
     <div>
       <AppButtonRed class="btn-bottom feedback">
-        <img src="icons/gio.svg" alt="cai-gio-bat-ca">
+        <img src="/icons/gio.svg" alt="cai-gio-bat-ca">
         Đặt vé
       </AppButtonRed>
     </div>
