@@ -22,7 +22,7 @@
       </div>
     </div>
     <div class="overlay" />
-    <img src="images/maps.png" alt="ban-do" width="100%">
+    <img src="/images/maps.png" alt="ban-do" width="100%">
   </div>
 </template>
 
