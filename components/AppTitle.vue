@@ -16,7 +16,7 @@ export default {
     const heading = 'h' + props.level;
     const textChild = [
       h(heading, { class: 'text' }, props.title),
-      h('img', { class: 'underline', src: '/icons/nhanh-sen.svg' })
+      h('img', { class: 'underline', src: '/images/nhanh-sen.png' })
     ];
 
     if (slots.default) {
@@ -32,7 +32,6 @@ export default {
 <style lang="scss">
 .title {
   display: flex;
-  align-items: center;
 
   h1 {
     font-size: 3.5rem;
@@ -54,6 +53,8 @@ export default {
 
   .underline {
     margin-left: 1em;
+    width: 69.67px;
+    height: auto;
   }
 }
 </style>

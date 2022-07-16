@@ -36,7 +36,7 @@
           Bộ gõ sử dụng trong múa rối nước là: trống cái, trống con, trống cơm,
           mõ, thanh la, não bạt. Khán giả đến với Rối Nước không chỉ xem những
           con rối chuyển động tài tình trên mặt nước, mà còn được thưởng thức
-          không khí biểu diễn náo nhiệt, sôi động từ âm nhạc của bộ gõ.
+          không khí biểu diễn náo nhiệt, sôi động từ bộ gõ.
         </p>
       </div>
       <div class="instruments">
@@ -65,8 +65,8 @@
         </div>
         <p class="instruments_content">
           Ngôn ngữ, cách thể hiện của sân khấu chèo và quan họ được áp dụng
-          triệt để vào nghệ thuật biểu diễn múa rối nước. Cách độc thoại rối
-          trên sân khấu không đơn thuần là những lời thoại mà đã được thể hiện
+          triệt để vào nghệ thuật biểu diễn múa rối nước. Cách độc thoại
+          trên sân khấu không đơn thuần là những lời thoại mà được thể hiện
           bằng cách nói có vần, có điệu của nghệ thuật sân khấu truyền thống
         </p>
       </div>
@@ -81,25 +81,25 @@ export default {
   setup () {
     const activityData = ref([
       {
-        iconImg: 'icons/icon-mat-nuoc.svg',
+        iconImg: '/icons/icon-mat-nuoc.svg',
         title: 'Dùng mặt nước làm sân khấu',
         content:
           'Buồng trò (nhà rối / thủy đình) thường được dựng lên giữa ao, hồ với kiến trúc cân đối tượng trưng cho mái đình của vùng nông thôn Việt Nam.'
       },
       {
-        iconImg: 'icons/icon-go.svg',
+        iconImg: '/icons/icon-go.svg',
         title: 'Những con rối được làm bằng gỗ',
         content:
           'Phần thân rối là phần nổi lên mặt nước thể hiện nhân vật, còn phần đế là phần chìm dưới mặt nước giữ cho rối nổi bên trên và là nơi lắp máy điều khiển cho quân rối cử động.'
       },
       {
-        iconImg: 'icons/icon-nghe-nhan.svg',
+        iconImg: '/icons/icon-nghe-nhan.svg',
         title: 'Người nghệ nhân rối nước',
         content:
           'Họ đứng trong buồng trò điều khiển con rối, thao tác cây sào, thừng, vọt... hoặc giật con rối bằng hệ thống dây bố trí ở bên ngoài hoặc dưới nước. '
       },
       {
-        iconImg: 'icons/icon-cay-tre.svg',
+        iconImg: '/icons/icon-cay-tre.svg',
         title: 'Phông che được làm bằng tre nứa',
         content:
           'Tạo sân khấu biểu diễn múa rối nước y như ban thờ lớn ở Đình, chùa của người Việt, xung quanh trang trí cờ, quạt, voi, lọng, cổng hàng mã...'
@@ -118,8 +118,8 @@ export default {
   padding: 0 1rem 2rem;
   margin-top: 2rem;
   .title {
-    font-size: 1.5rem;
-    font-weight: 500;
+    font-size: 1.25rem;
+    font-weight: 600;
   }
   .main {
     margin-top: 1rem;
@@ -131,14 +131,14 @@ export default {
         height: 55px;
       }
       &_title {
-        padding-top: 1rem;
-        font-size: 1.2rem;
+        padding-top: 0.625rem;
+        font-size: 1.25rem;
         font-weight: 600;
       }
       &_des {
-        padding-top: 1rem;
+        padding-top: 0.313rem;
         font-size: 1rem;
-        font-weight: 300;
+        font-weight: 400;
         line-height: 140%;
       }
     }
@@ -166,11 +166,6 @@ export default {
           border-radius: 50%;
         }
 
-        .big-cricle {
-          width: 40px;
-          height: 40px;
-        }
-
         hr {
           width: 100%;
           height: 1px;
@@ -179,8 +174,8 @@ export default {
         }
       }
       &_content {
-        font-size: 1.1rem;
-        font-weight: 200;
+        font-size: 1.125rem;
+        font-weight: 400;
         line-height: 140%;
         padding-left: 3.5rem;
 

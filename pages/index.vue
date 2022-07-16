@@ -47,21 +47,21 @@ export default {};
         }
 
         .description {
-            padding: 1rem 0;
             display: flex;
             justify-content: center;
             align-items: center;
+            padding-top: 1.125rem;
 
             .description_content {
-                flex: 7;
-                font-size: 1.1rem;
-                font-weight: 300;
+                flex: 8;
+                font-size: 1.25rem;
+                font-weight: 400;
                 line-height: 140%;
-                margin-right: 1rem;
+                right: 1rem;
             }
 
             div {
-                flex: 3;
+                flex: 2;
             }
         }
     }

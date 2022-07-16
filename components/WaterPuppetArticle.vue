@@ -1,7 +1,7 @@
 <template>
   <article class="water-puppet">
     <div class="water-puppet_title">
-      <AppTitle :level="3" :title="title" />
+      <AppTitle :level="3" :title="title" class="tesst" />
     </div>
     <div class="water-puppet_bg">
       <AppVideo :video="video" />
@@ -59,7 +59,12 @@ export default {
         margin: 0 auto;
         display: flex;
         align-items: center;
+
+        .underline{
+          margin-left: 0;
+        }
     }
+
     h1 {
         font-size: 1.875rem;
         font-weight: 700;
@@ -79,13 +84,13 @@ export default {
     &_description {
         max-width: 90%;
         margin: 0 auto;
-        padding-top: 1.25rem;
+        padding-top: 0.5rem;
         display: flex;
         justify-content: center;
         align-items: center;
 
         p {
-            flex: 7;
+            flex: 8;
             font-size: 1.125rem;
             font-weight: 300;
             line-height: 140%;
