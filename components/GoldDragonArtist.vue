@@ -8,7 +8,7 @@
           Hoàng
         </p>
         <p class="name last-name">
-          <img src="/icons/nhanh-sen.svg" alt="icon-nhanh-sen">
+          <img src="/images/nhanh-sen.png" alt="icon-nhanh-sen" class="nhanh-sen">
           Kim Thoa
         </p>
         <div class="desc text-right">
@@ -23,7 +23,7 @@
           Nguyễn
         </p>
         <p class="name last-name">
-          <img src="/icons/nhanh-sen.svg" alt="icon-nhanh-sen">
+          <img src="/images/nhanh-sen.png" alt="icon-nhanh-sen" class="nhanh-sen">
           Tiến Dũng
         </p>
         <div class="desc text-left">
@@ -38,7 +38,7 @@
           Cao
         </p>
         <p class="name last-name">
-          <img src="/icons/nhanh-sen.svg" alt="icon-nhanh-sen">
+          <img src="/images/nhanh-sen.png" alt="icon-nhanh-sen" class="nhanh-sen">
           Thị Huyền
         </p>
         <div class="desc text-right">
@@ -53,7 +53,7 @@
           Nguyễn
         </p>
         <p class="name last-name">
-          <img src="/icons/nhanh-sen.svg" alt="icon-nhanh-sen">
+          <img src="/images/nhanh-sen.png" alt="icon-nhanh-sen" class="nhanh-sen">
           Duy Biên
         </p>
         <div class="desc text-left">
@@ -68,7 +68,7 @@
           Nguyễn
         </p>
         <p class="name last-name">
-          <img src="/icons/nhanh-sen.svg" alt="icon-nhanh-sen">
+          <img src="/images/nhanh-sen.png" alt="icon-nhanh-sen" class="nhanh-sen">
           Thuỳ Trang
         </p>
         <div class="desc text-right">
@@ -83,7 +83,7 @@
           Vương
         </p>
         <p class="name last-name">
-          <img src="/icons/nhanh-sen.svg" alt="icon-nhanh-sen">
+          <img src="/images/nhanh-sen.png" alt="icon-nhanh-sen" class="nhanh-sen">
           Minh Lợi
         </p>
         <div class="desc text-left">
@@ -151,6 +151,11 @@
   width: 250px;
   height: 250px;
   opacity: 0.3;
+  }
+
+  .nhanh-sen{
+    width: 50px;
+    height: auto;
   }
 }
 </style>

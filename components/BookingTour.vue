@@ -93,14 +93,15 @@ section{
         }
 
         .content{
-            font-size: 1.1rem;
-            font-weight: 300;
+            font-size: 1.125rem;
+            font-weight: 400;
             line-height: 140%;
             padding-top: 1rem;
         }
 
         .app-button{
             margin-top: 1rem;
+            font-weight: 500;
             .ticket-book{
                 margin-right: 0.3rem;
             }

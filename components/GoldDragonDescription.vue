@@ -112,8 +112,8 @@ section{
         font-weight: 500;
     }
     .content{
-        font-size: 1rem;
-        font-weight: 300;
+        font-size: 1.125rem;
+        font-weight: 400;
         line-height: 140%;
         text-align: justify;
         padding: 1rem 1rem;
@@ -137,9 +137,9 @@ section{
         }
     }
     .info{
-      font-size:1rem;
+      font-size:1.125rem;
       line-height: 140%;
-      font-weight: 300;
+      font-weight: 400;
       margin-top: 0.5rem;
     }
     .info-bold{

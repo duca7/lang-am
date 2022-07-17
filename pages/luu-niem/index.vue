@@ -1,54 +1,58 @@
 <template>
-  <div id="souvenir" class="container">
-    <AppTitle :level="1" title="Lưu niệm" />
+  <div>
+    <div id="souvenir" class="container">
+      <AppTitle :level="1" title="Lưu niệm" />
 
-    <section class="souvenir-puppet">
-      <AppTitle :level="2" title="Quân rối" />
-      <div class="souvenir-puppet__list">
-        <div class="souvenir-puppet__col">
-          <SouvenirCard
-            v-for="item in souvenirs[0]"
-            :key="item"
-            :class="`${item.size || ''} souvenir-puppet__item`"
-            :item="item"
-            @add="goToInfo(item)"
-          />
+      <section class="souvenir-puppet">
+        <AppTitle :level="2" title="Quân rối" />
+        <div class="souvenir-puppet__list">
+          <div class="souvenir-puppet__col">
+            <SouvenirCard
+              v-for="item in souvenirs[0]"
+              :key="item"
+              :class="`${item.size || ''} souvenir-puppet__item`"
+              :item="item"
+              @add="goToInfo(item)"
+            />
+          </div>
+          <div class="souvenir-puppet__col">
+            <SouvenirCard
+              v-for="item in souvenirs[1]"
+              :key="item"
+              :class="`${item.size || ''} souvenir-puppet__item`"
+              :item="item"
+              @add="goToInfo(item)"
+            />
+          </div>
         </div>
-        <div class="souvenir-puppet__col">
-          <SouvenirCard
-            v-for="item in souvenirs[1]"
-            :key="item"
-            :class="`${item.size || ''} souvenir-puppet__item`"
-            :item="item"
-            @add="goToInfo(item)"
-          />
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="souvenir-gift">
-      <AppTitle :level="2" title="Quà tặng" />
-      <div class="souvenir-puppet__list">
-        <div class="souvenir-puppet__col">
-          <SouvenirCard
-            v-for="item in gifts[0]"
-            :key="item"
-            :class="`${item.size || ''} souvenir-puppet__item`"
-            :item="item"
-            @add="goToInfo(item)"
-          />
+      <section class="souvenir-gift">
+        <AppTitle :level="2" title="Quà tặng" />
+        <div class="souvenir-puppet__list">
+          <div class="souvenir-puppet__col">
+            <SouvenirCard
+              v-for="item in gifts[0]"
+              :key="item"
+              :class="`${item.size || ''} souvenir-puppet__item`"
+              :item="item"
+              @add="goToInfo(item)"
+            />
+          </div>
+          <div class="souvenir-puppet__col">
+            <SouvenirCard
+              v-for="item in gifts[1]"
+              :key="item"
+              :class="`${item.size || ''} souvenir-puppet__item`"
+              :item="item"
+              @add="goToInfo(item)"
+            />
+          </div>
         </div>
-        <div class="souvenir-puppet__col">
-          <SouvenirCard
-            v-for="item in gifts[1]"
-            :key="item"
-            :class="`${item.size || ''} souvenir-puppet__item`"
-            :item="item"
-            @add="goToInfo(item)"
-          />
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
+
+    <AppFooter />
   </div>
 </template>
 

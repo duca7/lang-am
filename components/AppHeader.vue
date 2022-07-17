@@ -31,7 +31,7 @@ const isLogoVisible = computed(() => allRoutes.some(r => r.path === path.value))
     padding: 0.2rem 1rem;
 
     #logo {
-        max-height: 50px;
+        max-height: 35px;
     }
 }
 </style>

@@ -1,83 +1,86 @@
 <template>
-  <div class="container booking-ticket">
-    <div class="booking-ticket__section">
-      <h4 class="booking-ticket__title">
-        Loại vé
-      </h4>
-      <div class="booking-ticket__type">
-        <div class="booking-ticket__price">
-          <p>Trẻ em</p>
-          <span>Giá vé 100.000đ</span>
+  <div>
+    <div class="container booking-ticket">
+      <div class="booking-ticket__section">
+        <h4 class="booking-ticket__title">
+          Loại vé
+        </h4>
+        <div class="booking-ticket__type">
+          <div class="booking-ticket__price">
+            <p>Trẻ em</p>
+            <span>Giá vé 100.000đ</span>
+          </div>
+          <div class="booking-ticket__quantity">
+            <AppMinusIcon />
+            <span class="booking-ticket__quantity-number font-mtd">0</span>
+            <AppPlusIcon />
+          </div>
         </div>
-        <div class="booking-ticket__quantity">
-          <AppMinusIcon />
-          <span class="booking-ticket__quantity-number font-mtd">0</span>
-          <AppPlusIcon />
+        <div class="booking-ticket__type">
+          <div class="booking-ticket__price">
+            <p>Người lớn</p>
+            <span>Giá vé 120.000đ</span>
+          </div>
+          <div class="booking-ticket__quantity">
+            <AppMinusIcon />
+            <span class="booking-ticket__quantity-number font-mtd">0</span>
+            <AppPlusIcon />
+          </div>
         </div>
       </div>
-      <div class="booking-ticket__type">
-        <div class="booking-ticket__price">
-          <p>Người lớn</p>
-          <span>Giá vé 120.000đ</span>
+      <div class="booking-ticket__section">
+        <h4 class="booking-ticket__title">
+          Chỗ ngồi
+        </h4>
+        <div class="booking-ticket__seat">
+          <p>
+            <span class="booking-ticket__seat-status empty" /><span>
+              Ghế trống</span>
+          </p>
+          <p>
+            <span class="booking-ticket__seat-status booked" /><span>Ghế đã chọn</span>
+          </p>
+          <p>
+            <span class="booking-ticket__seat-status booking" /><span>Ghế đang chọn</span>
+          </p>
         </div>
-        <div class="booking-ticket__quantity">
-          <AppMinusIcon />
-          <span class="booking-ticket__quantity-number font-mtd">0</span>
-          <AppPlusIcon />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="286"
+          height="22"
+          viewBox="0 0 286 22"
+          fill="none"
+          class="curve"
+        >
+          <path
+            d="M2.05859 2.3559C84.0336 26.0752 195.611 26.075 284.417 2.35603"
+            stroke="#860002"
+            stroke-width="3"
+            stroke-linecap="round"
+          />
+        </svg>
+        <BookingShowSeat class="booking-ticket__seat-map" />
+      </div>
+      <div class="booking-ticket__section">
+        <div class="booking-ticket__result">
+          <div class="booking-ticket__result-info">
+            <p>Vị trí ghế của bạn</p>
+            <span>Vé cá nhân: {{ a }}</span>
+          </div>
+          <div class="booking-ticket__result-price">
+            <p>Tổng cộng:</p>
+            <span class="font-mtd">
+              {{ price }}
+            </span>
+          </div>
         </div>
       </div>
+      <AppButtonRed size="large" class="booking-ticket__continue" @click="goToExtraInfo()">
+        <span>Tiếp tục</span>
+        <AppArrowIcon />
+      </AppButtonRed>
     </div>
-    <div class="booking-ticket__section">
-      <h4 class="booking-ticket__title">
-        Chỗ ngồi
-      </h4>
-      <div class="booking-ticket__seat">
-        <p>
-          <span class="booking-ticket__seat-status empty" /><span>
-            Ghế trống</span>
-        </p>
-        <p>
-          <span class="booking-ticket__seat-status booked" /><span>Ghế đã chọn</span>
-        </p>
-        <p>
-          <span class="booking-ticket__seat-status booking" /><span>Ghế đang chọn</span>
-        </p>
-      </div>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="286"
-        height="22"
-        viewBox="0 0 286 22"
-        fill="none"
-        class="curve"
-      >
-        <path
-          d="M2.05859 2.3559C84.0336 26.0752 195.611 26.075 284.417 2.35603"
-          stroke="#860002"
-          stroke-width="3"
-          stroke-linecap="round"
-        />
-      </svg>
-      <BookingShowSeat class="booking-ticket__seat-map" />
-    </div>
-    <div class="booking-ticket__section">
-      <div class="booking-ticket__result">
-        <div class="booking-ticket__result-info">
-          <p>Vị trí ghế của bạn</p>
-          <span>Vé cá nhân: {{ a }}</span>
-        </div>
-        <div class="booking-ticket__result-price">
-          <p>Tổng cộng:</p>
-          <span class="font-mtd">
-            {{ price }}
-          </span>
-        </div>
-      </div>
-    </div>
-    <AppButtonRed size="large" class="booking-ticket__continue" @click="goToExtraInfo()">
-      <span>Tiếp tục</span>
-      <AppArrowIcon />
-    </AppButtonRed>
+    <AppFooter />
   </div>
 </template>
 

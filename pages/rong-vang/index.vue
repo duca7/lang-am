@@ -1,25 +1,29 @@
 <template>
-  <div class="container">
-    <AppTitle :level="1" title="Rồng Vàng" />
-    <p class="gold-dragon-content">
-      Nhà hát múa rối nước tư nhân đầu tiên của Việt Nam mang tên Rồng Vàng.
-    </p>
-    <WaterPuppetArticle
-      title="Nhà hát Rồng Vàng"
-      description="Địa điểm biểu diễn múa rối nước dân gian Việt Nam duy nhất ở Tp. Hồ Chí Minh được diễn ra trên sân khấu nước."
-      video="/video/bat-tien.mp4"
-    >
-      <GoldDragonDescription />
-    </WaterPuppetArticle>
+  <div>
+    <div class="container">
+      <AppTitle :level="1" title="Rồng Vàng" />
+      <p class="gold-dragon-content">
+        Nhà hát múa rối nước tư nhân đầu tiên của Việt Nam mang tên Rồng Vàng.
+      </p>
+      <WaterPuppetArticle
+        title="Nhà hát Rồng Vàng"
+        description="Địa điểm biểu diễn múa rối nước dân gian Việt Nam duy nhất ở Tp. Hồ Chí Minh được diễn ra trên sân khấu nước."
+        video="/video/bat-tien.mp4"
+      >
+        <GoldDragonDescription />
+      </WaterPuppetArticle>
 
-    <GoldDragonArtist />
+      <GoldDragonArtist />
 
-    <div>
-      <AppButtonRed class="btn-bottom feedback">
-        <img src="/icons/gio.svg" alt="cai-gio-bat-ca">
-        Đặt vé
-      </AppButtonRed>
+      <div>
+        <AppButtonRed class="btn-bottom feedback">
+          <img src="/icons/gio.svg" alt="cai-gio-bat-ca">
+          Đặt vé
+        </AppButtonRed>
+      </div>
     </div>
+
+    <AppFooter />
   </div>
 </template>
 

@@ -1,69 +1,72 @@
 <template>
-  <div class="container booking-credit">
-    <div class="booking-credit__section">
-      <h2 class="theatre-name">
-        Nhà hát Rồng Vàng Payoo
-      </h2>
-      <div class="booking-credit__info">
-        <h4 class="booking-credit__title">
-          Thông tin thẻ
-        </h4>
-        <div class="booking-credit__info-time">
-          <span class="font-msr">04:00</span><AppClockIcon />
+  <div>
+    <div class="container booking-credit">
+      <div class="booking-credit__section">
+        <h2 class="theatre-name">
+          Nhà hát Rồng Vàng Payoo
+        </h2>
+        <div class="booking-credit__info">
+          <h4 class="booking-credit__title">
+            Thông tin thẻ
+          </h4>
+          <div class="booking-credit__info-time">
+            <span class="font-msr">04:00</span><AppClockIcon />
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="booking-credit__section">
-      <AppInput placeholder="Tên chủ thẻ" />
-      <AppInput placeholder="Số thẻ" />
-      <AppInput placeholder="Ngày hết hạn" />
-      <AppInput placeholder="CVV/CVC" />
+      <div class="booking-credit__section">
+        <AppInput placeholder="Tên chủ thẻ" />
+        <AppInput placeholder="Số thẻ" />
+        <AppInput placeholder="Ngày hết hạn" />
+        <AppInput placeholder="CVV/CVC" />
 
-      <div class="booking-credit__bill">
-        <strong>Mã đơn</strong><span class="font-msr">qKHS4nq54t2Ac...</span>
-        <strong>Số tiền</strong><span class="font-msr">240.000đ</span>
+        <div class="booking-credit__bill">
+          <strong>Mã đơn</strong><span class="font-msr">qKHS4nq54t2Ac...</span>
+          <strong>Số tiền</strong><span class="font-msr">240.000đ</span>
+        </div>
+
+        <p class="booking-credit__guarantee">
+          <AppSafetyIcon /><span>Giao dịch an toàn với PCI-DSS và ISO 27001</span>
+        </p>
       </div>
 
-      <p class="booking-credit__guarantee">
-        <AppSafetyIcon /><span>Giao dịch an toàn với PCI-DSS và ISO 27001</span>
-      </p>
-    </div>
+      <AppButtonRed
+        size="large"
+        class="booking-credit__continue"
+        @click="completeTransaction()"
+      >
+        <span>Thanh Toán</span>
+        <AppMoneyBagIcon />
+      </AppButtonRed>
 
-    <AppButtonRed
-      size="large"
-      class="booking-credit__continue"
-      @click="completeTransaction()"
-    >
-      <span>Thanh Toán</span>
-      <AppMoneyBagIcon />
-    </AppButtonRed>
+      <div class="booking-credit__section">
+        <p class="booking-credit__contact-title">
+          Liên hệ CSKH
+        </p>
+        <div class="booking-credit__contact">
+          <button class="booking-credit__contact-button">
+            <AppRongVangLogo />
+            <div class="booking-credit__contact-extra">
+              <strong>Rồng Vàng</strong>
+              <span class="font-msr">1900 22 24 88</span>
+            </div>
+          </button>
 
-    <div class="booking-credit__section">
-      <p class="booking-credit__contact-title">
-        Liên hệ CSKH
-      </p>
-      <div class="booking-credit__contact">
-        <button class="booking-credit__contact-button">
-          <AppRongVangLogo />
-          <div class="booking-credit__contact-extra">
-            <strong>Rồng Vàng</strong>
-            <span class="font-msr">1900 22 24 88</span>
-          </div>
-        </button>
-
-        <button class="booking-credit__contact-button">
-          <AppPayooLogo />
-          <div class="booking-credit__contact-extra">
-            <strong>Payoo</strong>
-            <span class="font-msr">1900 54 54 78</span>
-          </div>
-        </button>
+          <button class="booking-credit__contact-button">
+            <AppPayooLogo />
+            <div class="booking-credit__contact-extra">
+              <strong>Payoo</strong>
+              <span class="font-msr">1900 54 54 78</span>
+            </div>
+          </button>
+        </div>
       </div>
+      <BookingPaymentModal v-if="visible">
+        <component :is="ModalSlot" />
+      </BookingPaymentModal>
     </div>
-    <BookingPaymentModal v-if="visible">
-      <component :is="ModalSlot" />
-    </BookingPaymentModal>
+    <AppFooter />
   </div>
 </template>
 

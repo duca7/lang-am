@@ -1,32 +1,35 @@
 <template>
-  <section class="life-normal">
-    <AppTitle :level="1" title="Đời thường" />
-    <div class="info-show">
-      <div class="info-show_date">
-        <AppCalendar />
-        <p>10 - tháng 8 - 2022</p>
-      </div>
-      <p class="info-show_desc">
-        Những họat động hằng ngày của người dân Việt xưa được các trò tích tái hiện lại chân thật trên sân khấu Rồng Vàng.
-      </p>
-      <div class="price">
-        <p>100.000 vnđ <span> | </span> <span>Chỉ còn một số vé cuối</span></p>
-      </div>
+  <div>
+    <section class="life-normal">
+      <AppTitle :level="1" title="Đời thường" />
+      <div class="info-show">
+        <div class="info-show_date">
+          <AppCalendar />
+          <p>10 - tháng 8 - 2022</p>
+        </div>
+        <p class="info-show_desc">
+          Những họat động hằng ngày của người dân Việt xưa được các trò tích tái hiện lại chân thật trên sân khấu Rồng Vàng.
+        </p>
+        <div class="price">
+          <p>100.000 vnđ <span> | </span> <span>Chỉ còn một số vé cuối</span></p>
+        </div>
 
-      <AppButtonRed size="medium">
-        <AppCartIcon />
-        <span>Mua vé</span>
-      </AppButtonRed>
-    </div>
-    <BookingShowDetails
-      v-for="life in lifeShows"
-      :key="life.numberText"
-      :number="life.numberText"
-      :background="life.background"
-      :card="life.cardTitle"
-      :content="life.cardContent"
-    />
-  </section>
+        <AppButtonRed size="medium">
+          <AppCartIcon />
+          <span>Mua vé</span>
+        </AppButtonRed>
+      </div>
+      <BookingShowDetails
+        v-for="life in lifeShows"
+        :key="life.numberText"
+        :number="life.numberText"
+        :background="life.background"
+        :card="life.cardTitle"
+        :content="life.cardContent"
+      />
+    </section>
+    <AppFooter />
+  </div>
 </template>
 
 <script setup>

@@ -32,9 +32,13 @@ export default {
 <style lang="scss">
 .title {
   display: flex;
+  align-items: center;
 
   h1 {
-    font-size: 3.75rem;
+    font-size: 3.5rem;
+    &+.underline {
+      transform: scale(1.5);
+    }
   }
 
   h2 {
@@ -49,8 +53,8 @@ export default {
   }
 
   .underline {
-    margin-left: 1em;
-    width: 69.67px;
+    margin-left: .7em;
+    width: 70px;
     height: auto;
   }
 }

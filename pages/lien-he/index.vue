@@ -1,7 +1,10 @@
 <template>
-  <div class="contact container">
-    <ContactConnection />
-    <ContactAsk />
+  <div>
+    <div class="contact container">
+      <ContactConnection />
+      <ContactAsk />
+    </div>
+    <AppFooter />
   </div>
 </template>
 
