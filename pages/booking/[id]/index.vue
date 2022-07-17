@@ -29,7 +29,7 @@
     </div>
     <div class="booking-ticket__section">
       <h4 class="booking-ticket__title">
-        Chổ ngồi
+        Chỗ ngồi
       </h4>
       <div class="booking-ticket__seat">
         <p>
