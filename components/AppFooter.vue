@@ -31,9 +31,6 @@
       <span>Hỗ trợ</span>
       <span>Về Rối Nước</span>
     </aside>
-    <NuxtLink class="booking">
-      Đặt vé
-    </NuxtLink>
   </footer>
 </template>
 

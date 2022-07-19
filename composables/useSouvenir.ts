@@ -30,7 +30,7 @@ const souvenirs: Record<string, Souvenir> = {
   'bac-bat-ech': {
     name: 'Bác bắt ếch',
     price: 325,
-    url: '/images/souvenir/bac-bat-ech.png',
+    url: '/images/souvenir/bac-bat-ech.jpg',
     category: 'souvenir',
     slug: 'bac-bat-ech',
     bgc: '#121011'
@@ -49,7 +49,7 @@ const souvenirs: Record<string, Souvenir> = {
   'bac-nong': {
     name: 'Bác nông',
     price: 220,
-    url: '/images/souvenir/bac-nong.png',
+    url: '/images/souvenir/cau-ca.jpg',
     category: 'souvenir',
     size: 'md',
     slug: 'bac-nong',
@@ -59,7 +59,7 @@ const souvenirs: Record<string, Souvenir> = {
   'muc-dong': {
     name: 'Mục đồng',
     price: 400,
-    url: '/images/souvenir/muc-dong.png',
+    url: '/images/souvenir/chan-trau.jpg',
     category: 'souvenir',
     slug: 'muc-dong',
     bgc: '#121011'
@@ -68,7 +68,7 @@ const souvenirs: Record<string, Souvenir> = {
   'bac-nong-nu': {
     name: 'Bác nông nữ',
     price: 200,
-    url: '/images/souvenir/bac-nong-nu.png',
+    url: '/images/souvenir/co-tam.jpg',
     category: 'souvenir',
     slug: 'bac-nong-nu',
     bgc: '#181617'

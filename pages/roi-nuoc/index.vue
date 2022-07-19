@@ -21,10 +21,12 @@
       <WaterPuppetActivity />
     </WaterPuppetArticle>
     <div>
-      <AppButtonRed class="btn-bottom feedback">
-        <img src="/icons/gio.svg" alt="cai-gio-bat-ca" class="cai-gio">
-        Đặt vé
-      </AppButtonRed>
+      <NuxtLink to="/tro-tich">
+        <AppButtonRed class="btn-bottom feedback">
+          <img src="/icons/gio.svg" alt="cai-gio-bat-ca" class="cai-gio">
+          Đặt vé
+        </AppButtonRed>
+      </NuxtLink>
     </div>
 
     <!-- <div class="overlay" /> -->
