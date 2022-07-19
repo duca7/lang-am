@@ -12,7 +12,7 @@
       </p>
       <span>Số điện thoại</span>
       <p class="font-msr">
-        0258 3856 068
+        (+84)0258 3856 068
       </p>
       <span>Giờ mở của</span>
       <p class="font-msr">
